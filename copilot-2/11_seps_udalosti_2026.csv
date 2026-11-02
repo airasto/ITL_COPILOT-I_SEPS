@@ -1,0 +1,251 @@
+﻿Číslo udalosti;Dátum;Rozvodňa;Región;Pole;Typ zariadenia;Typ udalosti;Príčina;Trvanie (min);Technik;Stav
+UD-2026-1001;01.01.2026;R400 Horné Lúky;Západ;T401;Ochrana;Porucha;Neznáma;90;Marek Dobiaš;Uzavretá
+UD-2026-1002;03.01.2026;R400 Javorník;Stred;V432;Prístrojový transformátor;Vypnutie ochranou;Opotrebenie;20;Tomáš Repka;Uzavretá
+UD-2026-1003;07.01.2026;R400 Horné Lúky;Západ;V421;Ochrana;Porucha;Chyba komunikácie;20;Tomáš Repka;Uzavretá
+UD-2026-1004;07.01.2026;R400 Javorník;Stred;V433;Vypínač;Výstraha;Opotrebenie;620;Tomáš Repka;Uzavretá
+UD-2026-1005;09.01.2026;R400 Horné Lúky;Západ;V422;Ochrana;Porucha;Chyba komunikácie;60;Marek Dobiaš;Uzavretá
+UD-2026-1006;13.01.2026;R400 Horné Lúky;Západ;V423;Odpojovač;Vypnutie ochranou;Opotrebenie;90;Tomáš Repka;Uzavretá
+UD-2026-1007;13.01.2026;R400 Javorník;Stred;V432;Vypínač;Vypnutie ochranou;Porucha pohonu;30;Pavol Ševčík;Uzavretá
+UD-2026-1008;14.01.2026;R400 Horné Lúky;Západ;V422;Ochrana;Porucha;Chyba komunikácie;35;Marek Dobiaš;Uzavretá
+UD-2026-1009;15.01.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Vypnutie ochranou;Opotrebenie;120;Juraj Bielik;Uzavretá
+UD-2026-1010;16.01.2026;R400 Horné Lúky;Západ;V423;Odpojovač;Porucha;Porucha pohonu;75;Marek Dobiaš;Uzavretá
+UD-2026-1011;16.01.2026;R400 Javorník;Stred;V431;Ochrana;Vypnutie ochranou;Porucha terminálu;45;Tomáš Repka;Uzavretá
+UD-2026-1012;17.01.2026;R400 Javorník;Stred;V432;Ochrana;Výstraha;Porucha terminálu;35;Pavol Ševčík;Uzavretá
+UD-2026-1013;18.01.2026;R220 Dolná Ves;Západ;V221;Transformátor;Výstraha;Plyny v oleji;150;Juraj Bielik;Uzavretá
+UD-2026-1014;20.01.2026;R400 Javorník;Stred;V432;DC napájanie;Výstraha;Usmerňovač;45;Pavol Ševčík;Uzavretá
+UD-2026-1015;20.01.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Porucha;Opotrebenie;90;Pavol Ševčík;Uzavretá
+UD-2026-1016;21.01.2026;R400 Javorník;Stred;V434;DC napájanie;Vypnutie ochranou;Usmerňovač;20;Pavol Ševčík;Uzavretá
+UD-2026-1017;21.01.2026;R220 Dolná Ves;Západ;T202;Ochrana;Výstraha;Chyba komunikácie;20;Pavol Ševčík;Uzavretá
+UD-2026-1018;23.01.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Opotrebenie;30;Tomáš Repka;Uzavretá
+UD-2026-1019;24.01.2026;R400 Horné Lúky;Západ;V422;Ochrana;Vypnutie ochranou;Porucha terminálu;20;Marek Dobiaš;Uzavretá
+UD-2026-1020;24.01.2026;R400 Horné Lúky;Západ;V422;Ochrana;Vypnutie ochranou;Porucha terminálu;20;Marek Dobiaš;Uzavretá
+UD-2026-1021;24.01.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Vypnutie ochranou;Zvýšená teplota svorky;480;Pavol Ševčík;Uzavretá
+UD-2026-1022;25.01.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Opotrebenie;75;Pavol Ševčík;Uzavretá
+UD-2026-1023;03.02.2026;R400 Javorník;Stred;V433;Odpojovač;Porucha;Zvýšená teplota svorky;60;Tomáš Repka;Uzavretá
+UD-2026-1024;04.02.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Únik SF6;75;Juraj Bielik;Uzavretá
+UD-2026-1025;05.02.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Únik SF6;75;Pavol Ševčík;Uzavretá
+UD-2026-1026;07.02.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Opotrebenie;120;Marek Dobiaš;Uzavretá
+UD-2026-1027;08.02.2026;R220 Dolná Ves;Západ;T201;Prístrojový transformátor;Porucha;Opotrebenie;45;Juraj Bielik;Uzavretá
+UD-2026-1028;09.02.2026;R400 Javorník;Stred;V431;Odpojovač;Vypnutie ochranou;Zvýšená teplota svorky;30;Tomáš Repka;Uzavretá
+UD-2026-1029;10.02.2026;R220 Dolná Ves;Západ;T202;DC napájanie;Vypnutie ochranou;Usmerňovač;45;Juraj Bielik;Uzavretá
+UD-2026-1030;11.02.2026;R220 Dolná Ves;Západ;T201;Vypínač;Výstraha;Opotrebenie;150;Juraj Bielik;Uzavretá
+UD-2026-1031;11.02.2026;R400 Javorník;Stred;V434;Odpojovač;Porucha;Zvýšená teplota svorky;35;Tomáš Repka;Uzavretá
+UD-2026-1032;13.02.2026;R220 Dolná Ves;Západ;T202;Ochrana;Výstraha;Neznáma;150;Juraj Bielik;Uzavretá
+UD-2026-1033;15.02.2026;R400 Javorník;Stred;V434;Ochrana;Výstraha;Porucha terminálu;150;Pavol Ševčík;Uzavretá
+UD-2026-1034;16.02.2026;R400 Horné Lúky;Západ;T401;DC napájanie;Výstraha;Batéria;150;Tomáš Repka;Uzavretá
+UD-2026-1035;17.02.2026;R400 Horné Lúky;Západ;T401;Vypínač;Vypnutie ochranou;Porucha pohonu;30;Marek Dobiaš;Uzavretá
+UD-2026-1036;17.02.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Opotrebenie;35;Tomáš Repka;Uzavretá
+UD-2026-1037;18.02.2026;R400 Javorník;Stred;V434;DC napájanie;Výstraha;Batéria;75;Tomáš Repka;Uzavretá
+UD-2026-1038;19.02.2026;R400 Javorník;Stred;V433;Ochrana;Výstraha;Porucha terminálu;60;Pavol Ševčík;Uzavretá
+UD-2026-1039;19.02.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Porucha pohonu;30;Marek Dobiaš;Uzavretá
+UD-2026-1040;24.02.2026;R400 Javorník;Stred;V434;DC napájanie;Výstraha;Usmerňovač;45;Tomáš Repka;Uzavretá
+UD-2026-1041;25.02.2026;R400 Javorník;Stred;V431;Vypínač;Porucha;Opotrebenie;45;Tomáš Repka;Uzavretá
+UD-2026-1042;26.02.2026;R400 Horné Lúky;Západ;V421;Odpojovač;Výstraha;Zvýšená teplota svorky;120;Marek Dobiaš;Uzavretá
+UD-2026-1043;26.02.2026;R400 Javorník;Stred;V433;DC napájanie;Výstraha;Usmerňovač;35;Pavol Ševčík;Uzavretá
+UD-2026-1044;27.02.2026;R400 Javorník;Stred;V431;Ochrana;Výstraha;Chyba komunikácie;620;Pavol Ševčík;Uzavretá
+UD-2026-1045;02.03.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Opotrebenie;150;Pavol Ševčík;Uzavretá
+UD-2026-1046;03.03.2026;R400 Horné Lúky;Západ;V422;Odpojovač;Výstraha;Porucha pohonu;75;Marek Dobiaš;Uzavretá
+UD-2026-1047;05.03.2026;R400 Horné Lúky;Západ;V421;Vypínač;Výstraha;Únik SF6;75;Tomáš Repka;Uzavretá
+UD-2026-1048;05.03.2026;R400 Horné Lúky;Západ;V422;DC napájanie;Výstraha;Usmerňovač;60;Marek Dobiaš;Uzavretá
+UD-2026-1049;09.03.2026;R400 Javorník;Stred;V434;Odpojovač;Výstraha;Porucha pohonu;60;Tomáš Repka;Uzavretá
+UD-2026-1050;10.03.2026;R220 Dolná Ves;Západ;V222;Vypínač;Výstraha;Únik SF6;120;Pavol Ševčík;Uzavretá
+UD-2026-1051;10.03.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Porucha pohonu;60;Marek Dobiaš;Uzavretá
+UD-2026-1052;11.03.2026;R400 Horné Lúky;Západ;V421;Transformátor;Porucha;Prepínač odbočiek;150;Tomáš Repka;Uzavretá
+UD-2026-1053;12.03.2026;R220 Dolná Ves;Západ;T201;Vypínač;Porucha;Porucha pohonu;150;Pavol Ševčík;Uzavretá
+UD-2026-1054;13.03.2026;R400 Javorník;Stred;V433;Ochrana;Porucha;Neznáma;90;Tomáš Repka;Uzavretá
+UD-2026-1055;15.03.2026;R220 Dolná Ves;Západ;T201;Transformátor;Výstraha;Plyny v oleji;45;Pavol Ševčík;Uzavretá
+UD-2026-1056;15.03.2026;R400 Javorník;Stred;V432;Vypínač;Vypnutie ochranou;Porucha pohonu;75;Tomáš Repka;Uzavretá
+UD-2026-1057;16.03.2026;R400 Javorník;Stred;V431;Vypínač;Porucha;Únik SF6;75;Pavol Ševčík;Uzavretá
+UD-2026-1058;17.03.2026;R220 Dolná Ves;Západ;V221;Transformátor;Výstraha;Plyny v oleji;35;Juraj Bielik;Uzavretá
+UD-2026-1059;17.03.2026;R220 Dolná Ves;Západ;V222;Prístrojový transformátor;Porucha;Neznáma;20;Pavol Ševčík;Uzavretá
+UD-2026-1060;17.03.2026;R400 Horné Lúky;Západ;V422;Odpojovač;Vypnutie ochranou;Porucha pohonu;75;Marek Dobiaš;Uzavretá
+UD-2026-1061;18.03.2026;R400 Javorník;Stred;V433;Vypínač;Výstraha;Porucha pohonu;20;Tomáš Repka;Uzavretá
+UD-2026-1062;26.03.2026;R220 Dolná Ves;Západ;T201;Vypínač;Výstraha;Porucha pohonu;45;Juraj Bielik;Uzavretá
+UD-2026-1063;26.03.2026;R400 Horné Lúky;Západ;V423;Ochrana;Výstraha;Chyba komunikácie;60;Marek Dobiaš;Uzavretá
+UD-2026-1064;27.03.2026;R400 Horné Lúky;Západ;V421;Odpojovač;Vypnutie ochranou;Porucha pohonu;35;Tomáš Repka;Uzavretá
+UD-2026-1065;28.03.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Opotrebenie;150;Tomáš Repka;Uzavretá
+UD-2026-1066;28.03.2026;R400 Horné Lúky;Západ;T401;Ochrana;Vypnutie ochranou;Neznáma;30;Tomáš Repka;Uzavretá
+UD-2026-1067;01.04.2026;R400 Horné Lúky;Západ;V422;Ochrana;Porucha;Neznáma;120;Tomáš Repka;Uzavretá
+UD-2026-1068;01.04.2026;R400 Horné Lúky;Západ;T401;Vypínač;Výstraha;Opotrebenie;35;Tomáš Repka;Uzavretá
+UD-2026-1069;01.04.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Opotrebenie;30;Tomáš Repka;Uzavretá
+UD-2026-1070;04.04.2026;R400 Javorník;Stred;V434;Ochrana;Porucha;Neznáma;90;Tomáš Repka;Uzavretá
+UD-2026-1071;05.04.2026;R400 Javorník;Stred;V433;Ochrana;Porucha;Porucha terminálu;90;Pavol Ševčík;Uzavretá
+UD-2026-1072;06.04.2026;R400 Horné Lúky;Západ;T401;Odpojovač;Porucha;Opotrebenie;150;Marek Dobiaš;Uzavretá
+UD-2026-1073;09.04.2026;R400 Horné Lúky;Západ;V422;Vypínač;Porucha;Opotrebenie;90;Marek Dobiaš;Uzavretá
+UD-2026-1074;11.04.2026;R400 Javorník;Stred;V434;Vypínač;Porucha;Opotrebenie;35;Tomáš Repka;Uzavretá
+UD-2026-1075;12.04.2026;R400 Horné Lúky;Západ;V422;Odpojovač;Výstraha;Opotrebenie;35;Tomáš Repka;Uzavretá
+UD-2026-1076;12.04.2026;R220 Dolná Ves;Západ;V222;Odpojovač;Porucha;Zvýšená teplota svorky;30;Pavol Ševčík;Uzavretá
+UD-2026-1077;14.04.2026;R400 Horné Lúky;Západ;V423;Vypínač;Vypnutie ochranou;Porucha pohonu;35;Marek Dobiaš;Uzavretá
+UD-2026-1078;18.04.2026;R400 Javorník;Stred;V432;Prístrojový transformátor;Vypnutie ochranou;Opotrebenie;75;Tomáš Repka;Uzavretá
+UD-2026-1079;19.04.2026;R400 Javorník;Stred;V433;Vypínač;Vypnutie ochranou;Opotrebenie;45;Pavol Ševčík;Uzavretá
+UD-2026-1080;19.04.2026;R400 Javorník;Stred;V431;Transformátor;Porucha;Prepínač odbočiek;75;Tomáš Repka;Uzavretá
+UD-2026-1081;20.04.2026;R400 Horné Lúky;Západ;V422;Ochrana;Výstraha;Chyba komunikácie;30;Marek Dobiaš;Uzavretá
+UD-2026-1082;20.04.2026;R400 Horné Lúky;Západ;T401;Transformátor;Porucha;Plyny v oleji;75;Tomáš Repka;Uzavretá
+UD-2026-1083;21.04.2026;R220 Dolná Ves;Západ;T202;Prístrojový transformátor;Výstraha;Opotrebenie;45;Juraj Bielik;Uzavretá
+UD-2026-1084;21.04.2026;R400 Javorník;Stred;V431;Odpojovač;Porucha;Porucha pohonu;150;Pavol Ševčík;Uzavretá
+UD-2026-1085;22.04.2026;R400 Javorník;Stred;V431;Transformátor;Porucha;Plyny v oleji;30;Pavol Ševčík;Uzavretá
+UD-2026-1086;25.04.2026;R400 Javorník;Stred;V434;Prístrojový transformátor;Výstraha;Opotrebenie;150;Tomáš Repka;Uzavretá
+UD-2026-1087;27.04.2026;R400 Horné Lúky;Západ;V422;Odpojovač;Výstraha;Opotrebenie;90;Marek Dobiaš;Uzavretá
+UD-2026-1088;28.04.2026;R220 Dolná Ves;Západ;V222;Prístrojový transformátor;Porucha;Neznáma;90;Juraj Bielik;Uzavretá
+UD-2026-1089;01.05.2026;R400 Horné Lúky;Západ;T401;Prístrojový transformátor;Porucha;Neznáma;20;Marek Dobiaš;Uzavretá
+UD-2026-1090;02.05.2026;R220 Dolná Ves;Západ;T202;Prístrojový transformátor;Výstraha;Opotrebenie;75;Juraj Bielik;Uzavretá
+UD-2026-1091;02.05.2026;R400 Javorník;Stred;V434;Vypínač;Výstraha;Porucha pohonu;120;Pavol Ševčík;Uzavretá
+UD-2026-1092;04.05.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Opotrebenie;120;Pavol Ševčík;Uzavretá
+UD-2026-1093;04.05.2026;R220 Dolná Ves;Západ;V222;Vypínač;Výstraha;Porucha pohonu;150;Pavol Ševčík;Uzavretá
+UD-2026-1094;05.05.2026;R400 Javorník;Stred;V432;Vypínač;Porucha;Opotrebenie;45;Pavol Ševčík;Uzavretá
+UD-2026-1095;06.05.2026;R220 Dolná Ves;Západ;V222;Vypínač;Výstraha;Únik SF6;20;Pavol Ševčík;Uzavretá
+UD-2026-1096;07.05.2026;R400 Javorník;Stred;V433;Prístrojový transformátor;Porucha;Opotrebenie;20;Tomáš Repka;Uzavretá
+UD-2026-1097;08.05.2026;R220 Dolná Ves;Západ;T202;DC napájanie;Výstraha;Usmerňovač;45;Pavol Ševčík;Uzavretá
+UD-2026-1098;10.05.2026;R400 Javorník;Stred;V431;Odpojovač;Porucha;Opotrebenie;45;Tomáš Repka;Uzavretá
+UD-2026-1099;14.05.2026;R400 Javorník;Stred;V432;Vypínač;Výstraha;Únik SF6;60;Tomáš Repka;Uzavretá
+UD-2026-1100;17.05.2026;R400 Javorník;Stred;V432;Odpojovač;Výstraha;Zvýšená teplota svorky;45;Pavol Ševčík;Uzavretá
+UD-2026-1101;18.05.2026;R400 Javorník;Stred;V434;Ochrana;Porucha;Chyba komunikácie;35;Pavol Ševčík;Uzavretá
+UD-2026-1102;19.05.2026;R220 Dolná Ves;Západ;V221;Ochrana;Výstraha;Porucha terminálu;90;Juraj Bielik;Uzavretá
+UD-2026-1103;21.05.2026;R220 Dolná Ves;Západ;V222;Prístrojový transformátor;Porucha;Neznáma;60;Juraj Bielik;Uzavretá
+UD-2026-1104;23.05.2026;R400 Javorník;Stred;V433;Ochrana;Výstraha;Porucha terminálu;35;Tomáš Repka;Uzavretá
+UD-2026-1105;24.05.2026;R400 Javorník;Stred;V433;Prístrojový transformátor;Výstraha;Neznáma;35;Tomáš Repka;Uzavretá
+UD-2026-1106;24.05.2026;R400 Javorník;Stred;V434;Odpojovač;Výstraha;Porucha pohonu;75;Pavol Ševčík;Uzavretá
+UD-2026-1107;24.05.2026;R400 Horné Lúky;Západ;V421;DC napájanie;Vypnutie ochranou;Batéria;60;Marek Dobiaš;Uzavretá
+UD-2026-1108;26.05.2026;R400 Javorník;Stred;V434;Ochrana;Vypnutie ochranou;Chyba komunikácie;20;Pavol Ševčík;Uzavretá
+UD-2026-1109;28.05.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Porucha;Zvýšená teplota svorky;30;Juraj Bielik;Uzavretá
+UD-2026-1110;28.05.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Porucha pohonu;35;Pavol Ševčík;Uzavretá
+UD-2026-1111;02.06.2026;R400 Horné Lúky;Západ;T401;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;150;Tomáš Repka;Uzavretá
+UD-2026-1112;04.06.2026;R400 Javorník;Stred;V433;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;20;Tomáš Repka;Uzavretá
+UD-2026-1113;05.06.2026;R400 Horné Lúky;Západ;V423;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;150;Marek Dobiaš;Uzavretá
+UD-2026-1114;05.06.2026;R400 Horné Lúky;Západ;V421;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;35;Marek Dobiaš;Uzavretá
+UD-2026-1115;07.06.2026;R400 Javorník;Stred;V433;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;35;Tomáš Repka;Uzavretá
+UD-2026-1116;09.06.2026;R400 Javorník;Stred;V431;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Pavol Ševčík;Uzavretá
+UD-2026-1117;09.06.2026;R220 Dolná Ves;Západ;T201;Vypínač;Porucha;Únik SF6;60;Juraj Bielik;Uzavretá
+UD-2026-1118;09.06.2026;R220 Dolná Ves;Západ;T202;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;75;Juraj Bielik;Uzavretá
+UD-2026-1119;09.06.2026;R400 Javorník;Stred;V431;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1120;09.06.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;75;Pavol Ševčík;Uzavretá
+UD-2026-1121;11.06.2026;R220 Dolná Ves;Západ;V222;Prístrojový transformátor;Vypnutie ochranou;Opotrebenie;150;Pavol Ševčík;Uzavretá
+UD-2026-1122;12.06.2026;R220 Dolná Ves;Západ;T201;Vypínač;Porucha;Opotrebenie;45;Juraj Bielik;Uzavretá
+UD-2026-1123;12.06.2026;R400 Horné Lúky;Západ;V423;Ochrana;Výstraha;Neznáma;90;Tomáš Repka;Uzavretá
+UD-2026-1124;13.06.2026;R400 Horné Lúky;Západ;V422;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;120;Marek Dobiaš;Uzavretá
+UD-2026-1125;13.06.2026;R400 Javorník;Stred;V431;Ochrana;Porucha;Neznáma;90;Tomáš Repka;Uzavretá
+UD-2026-1126;14.06.2026;R400 Horné Lúky;Západ;T401;Odpojovač;Výstraha;Opotrebenie;90;Tomáš Repka;Uzavretá
+UD-2026-1127;14.06.2026;R400 Javorník;Stred;V434;Vypínač;Porucha;Únik SF6;75;Pavol Ševčík;Uzavretá
+UD-2026-1128;16.06.2026;R400 Horné Lúky;Západ;V422;Vypínač;Porucha;Opotrebenie;75;Tomáš Repka;Uzavretá
+UD-2026-1129;16.06.2026;R400 Javorník;Stred;V433;Vypínač;Porucha;Opotrebenie;150;Tomáš Repka;Uzavretá
+UD-2026-1130;16.06.2026;R220 Dolná Ves;Západ;T201;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1131;18.06.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;60;Pavol Ševčík;Uzavretá
+UD-2026-1132;18.06.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Opotrebenie;35;Juraj Bielik;Uzavretá
+UD-2026-1133;19.06.2026;R400 Horné Lúky;Západ;V423;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;150;Marek Dobiaš;Uzavretá
+UD-2026-1134;20.06.2026;R220 Dolná Ves;Západ;T202;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;120;Pavol Ševčík;Uzavretá
+UD-2026-1135;20.06.2026;R400 Horné Lúky;Západ;V423;Vypínač;Porucha;Únik SF6;150;Tomáš Repka;Uzavretá
+UD-2026-1136;25.06.2026;R400 Javorník;Stred;V432;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;30;Pavol Ševčík;Uzavretá
+UD-2026-1137;25.06.2026;R400 Horné Lúky;Západ;T401;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;35;Marek Dobiaš;Uzavretá
+UD-2026-1138;26.06.2026;R400 Horné Lúky;Západ;T401;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Marek Dobiaš;Uzavretá
+UD-2026-1139;26.06.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;75;Tomáš Repka;Uzavretá
+UD-2026-1140;27.06.2026;R400 Horné Lúky;Západ;V422;Vypínač;Výstraha;Opotrebenie;45;Tomáš Repka;Uzavretá
+UD-2026-1141;01.07.2026;R400 Horné Lúky;Západ;V423;Vypínač;Výstraha;Opotrebenie;35;Marek Dobiaš;Uzavretá
+UD-2026-1142;01.07.2026;R400 Horné Lúky;Západ;V423;Odpojovač;Výstraha;Porucha pohonu;75;Marek Dobiaš;Uzavretá
+UD-2026-1143;02.07.2026;R400 Horné Lúky;Západ;V423;Vypínač;Výstraha;Opotrebenie;75;Tomáš Repka;Uzavretá
+UD-2026-1144;03.07.2026;R220 Dolná Ves;Západ;V222;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;45;Pavol Ševčík;Uzavretá
+UD-2026-1145;04.07.2026;R400 Javorník;Stred;V431;DC napájanie;Porucha;Batéria;120;Pavol Ševčík;Uzavretá
+UD-2026-1146;04.07.2026;R400 Javorník;Stred;V434;Odpojovač;Porucha;Porucha pohonu;45;Pavol Ševčík;Uzavretá
+UD-2026-1147;07.07.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Marek Dobiaš;Uzavretá
+UD-2026-1148;08.07.2026;R400 Horné Lúky;Západ;T401;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;30;Marek Dobiaš;Uzavretá
+UD-2026-1149;09.07.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;45;Juraj Bielik;Uzavretá
+UD-2026-1150;11.07.2026;R400 Horné Lúky;Západ;V422;Vypínač;Výstraha;Porucha pohonu;35;Marek Dobiaš;Uzavretá
+UD-2026-1151;13.07.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;120;Juraj Bielik;Uzavretá
+UD-2026-1152;13.07.2026;R400 Horné Lúky;Západ;V423;Transformátor;Vypnutie ochranou;Chladenie;35;Tomáš Repka;Uzavretá
+UD-2026-1153;13.07.2026;R400 Horné Lúky;Západ;T401;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;90;Tomáš Repka;Uzavretá
+UD-2026-1154;14.07.2026;R400 Horné Lúky;Západ;V421;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;150;Marek Dobiaš;Uzavretá
+UD-2026-1155;15.07.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Porucha;Zvýšená teplota svorky;90;Juraj Bielik;Uzavretá
+UD-2026-1156;15.07.2026;R400 Horné Lúky;Západ;V421;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;75;Marek Dobiaš;Uzavretá
+UD-2026-1157;15.07.2026;R220 Dolná Ves;Západ;T202;Ochrana;Výstraha;Porucha terminálu;30;Juraj Bielik;Uzavretá
+UD-2026-1158;16.07.2026;R400 Javorník;Stred;V432;Vypínač;Výstraha;Opotrebenie;35;Pavol Ševčík;Uzavretá
+UD-2026-1159;17.07.2026;R400 Horné Lúky;Západ;V421;Vypínač;Porucha;Porucha pohonu;120;Tomáš Repka;Uzavretá
+UD-2026-1160;17.07.2026;R220 Dolná Ves;Západ;T201;Vypínač;Porucha;Opotrebenie;150;Juraj Bielik;Uzavretá
+UD-2026-1161;19.07.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;30;Pavol Ševčík;Uzavretá
+UD-2026-1162;19.07.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;60;Juraj Bielik;Uzavretá
+UD-2026-1163;20.07.2026;R400 Horné Lúky;Západ;V423;Vypínač;Vypnutie ochranou;Porucha pohonu;20;Marek Dobiaš;Uzavretá
+UD-2026-1164;22.07.2026;R400 Javorník;Stred;V433;Prístrojový transformátor;Výstraha;Neznáma;45;Tomáš Repka;Uzavretá
+UD-2026-1165;22.07.2026;R400 Javorník;Stred;V433;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1166;22.07.2026;R220 Dolná Ves;Západ;V222;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;75;Juraj Bielik;Uzavretá
+UD-2026-1167;23.07.2026;R400 Javorník;Stred;V433;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1168;24.07.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Únik SF6;90;Juraj Bielik;Uzavretá
+UD-2026-1169;25.07.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Únik SF6;30;Pavol Ševčík;Uzavretá
+UD-2026-1170;28.07.2026;R400 Horné Lúky;Západ;V422;Vypínač;Porucha;Porucha pohonu;45;Marek Dobiaš;Uzavretá
+UD-2026-1171;01.08.2026;R400 Horné Lúky;Západ;V423;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;60;Tomáš Repka;Uzavretá
+UD-2026-1172;01.08.2026;R400 Javorník;Stred;V433;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;150;Pavol Ševčík;Uzavretá
+UD-2026-1173;02.08.2026;R220 Dolná Ves;Západ;T201;Odpojovač;Porucha;Porucha pohonu;35;Juraj Bielik;Uzavretá
+UD-2026-1174;02.08.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Marek Dobiaš;Uzavretá
+UD-2026-1175;03.08.2026;R400 Javorník;Stred;V433;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;45;Pavol Ševčík;Uzavretá
+UD-2026-1176;04.08.2026;R220 Dolná Ves;Západ;T201;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;60;Pavol Ševčík;Uzavretá
+UD-2026-1177;04.08.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;35;Juraj Bielik;Uzavretá
+UD-2026-1178;05.08.2026;R400 Horné Lúky;Západ;T401;Odpojovač;Výstraha;Zvýšená teplota svorky;150;Tomáš Repka;Uzavretá
+UD-2026-1179;06.08.2026;R220 Dolná Ves;Západ;T202;Ochrana;Vypnutie ochranou;Atmosférické vplyvy;30;Juraj Bielik;Uzavretá
+UD-2026-1180;07.08.2026;R220 Dolná Ves;Západ;V221;Vypínač;Porucha;Opotrebenie;60;Juraj Bielik;Uzavretá
+UD-2026-1181;07.08.2026;R400 Javorník;Stred;V434;Vypínač;Porucha;Únik SF6;20;Pavol Ševčík;Uzavretá
+UD-2026-1182;11.08.2026;R400 Javorník;Stred;V434;DC napájanie;Výstraha;Batéria;75;Tomáš Repka;Uzavretá
+UD-2026-1183;11.08.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;35;Pavol Ševčík;Uzavretá
+UD-2026-1184;12.08.2026;R400 Javorník;Stred;V432;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;60;Tomáš Repka;Uzavretá
+UD-2026-1185;13.08.2026;R220 Dolná Ves;Západ;T202;Vypínač;Výstraha;Porucha pohonu;30;Juraj Bielik;Uzavretá
+UD-2026-1186;14.08.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1187;17.08.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;30;Pavol Ševčík;Uzavretá
+UD-2026-1188;17.08.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Juraj Bielik;Uzavretá
+UD-2026-1189;18.08.2026;R220 Dolná Ves;Západ;V222;Vypínač;Vypnutie ochranou;Porucha pohonu;150;Pavol Ševčík;Uzavretá
+UD-2026-1190;20.08.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;20;Pavol Ševčík;Uzavretá
+UD-2026-1191;21.08.2026;R400 Javorník;Stred;V434;Vypínač;Porucha;Opotrebenie;35;Tomáš Repka;Uzavretá
+UD-2026-1192;21.08.2026;R400 Javorník;Stred;V431;DC napájanie;Výstraha;Batéria;620;Tomáš Repka;Uzavretá
+UD-2026-1193;21.08.2026;R400 Javorník;Stred;V433;Ochrana;Porucha;Chyba komunikácie;30;Tomáš Repka;Uzavretá
+UD-2026-1194;22.08.2026;R400 Javorník;Stred;V431;Vypínač;Výstraha;Únik SF6;90;Pavol Ševčík;Uzavretá
+UD-2026-1195;22.08.2026;R220 Dolná Ves;Západ;T202;Vypínač;Výstraha;Opotrebenie;480;Pavol Ševčík;Uzavretá
+UD-2026-1196;22.08.2026;R400 Javorník;Stred;V433;Ochrana;Výstraha;Chyba komunikácie;30;Pavol Ševčík;Uzavretá
+UD-2026-1197;23.08.2026;R400 Javorník;Stred;V432;DC napájanie;Vypnutie ochranou;Batéria;30;Pavol Ševčík;Uzavretá
+UD-2026-1198;23.08.2026;R220 Dolná Ves;Západ;V221;Vypínač;Vypnutie ochranou;Atmosférické vplyvy;90;Pavol Ševčík;Uzavretá
+UD-2026-1199;28.08.2026;R400 Horné Lúky;Západ;V421;Vypínač;Vypnutie ochranou;Únik SF6;90;Marek Dobiaš;Uzavretá
+UD-2026-1200;28.08.2026;R220 Dolná Ves;Západ;T201;Vypínač;Výstraha;Opotrebenie;60;Pavol Ševčík;Uzavretá
+UD-2026-1201;03.09.2026;R400 Javorník;Stred;V431;Vypínač;Vypnutie ochranou;Únik SF6;75;Pavol Ševčík;Uzavretá
+UD-2026-1202;03.09.2026;R400 Horné Lúky;Západ;V421;Ochrana;Výstraha;Chyba komunikácie;75;Tomáš Repka;Uzavretá
+UD-2026-1203;05.09.2026;R400 Javorník;Stred;V432;Vypínač;Výstraha;Opotrebenie;20;Pavol Ševčík;Uzavretá
+UD-2026-1204;05.09.2026;R400 Horné Lúky;Západ;V422;Transformátor;Výstraha;Prepínač odbočiek;150;Tomáš Repka;Uzavretá
+UD-2026-1205;06.09.2026;R400 Javorník;Stred;V432;Prístrojový transformátor;Výstraha;Neznáma;75;Tomáš Repka;Uzavretá
+UD-2026-1206;08.09.2026;R220 Dolná Ves;Západ;V222;Vypínač;Výstraha;Opotrebenie;35;Pavol Ševčík;Uzavretá
+UD-2026-1207;08.09.2026;R220 Dolná Ves;Západ;V221;Odpojovač;Výstraha;Porucha pohonu;60;Juraj Bielik;Uzavretá
+UD-2026-1208;10.09.2026;R400 Javorník;Stred;V434;Vypínač;Vypnutie ochranou;Opotrebenie;20;Tomáš Repka;Uzavretá
+UD-2026-1209;10.09.2026;R220 Dolná Ves;Západ;V221;Odpojovač;Porucha;Zvýšená teplota svorky;120;Pavol Ševčík;Uzavretá
+UD-2026-1210;11.09.2026;R400 Javorník;Stred;V431;Prístrojový transformátor;Porucha;Opotrebenie;30;Tomáš Repka;Uzavretá
+UD-2026-1211;13.09.2026;R400 Horné Lúky;Západ;T401;Prístrojový transformátor;Porucha;Neznáma;35;Marek Dobiaš;Uzavretá
+UD-2026-1212;15.09.2026;R400 Horné Lúky;Západ;V422;Vypínač;Porucha;Únik SF6;60;Tomáš Repka;Uzavretá
+UD-2026-1213;16.09.2026;R400 Javorník;Stred;V432;Vypínač;Vypnutie ochranou;Porucha pohonu;60;Pavol Ševčík;Uzavretá
+UD-2026-1214;16.09.2026;R220 Dolná Ves;Západ;T202;Prístrojový transformátor;Výstraha;Neznáma;90;Juraj Bielik;Uzavretá
+UD-2026-1215;18.09.2026;R400 Horné Lúky;Západ;V423;Vypínač;Porucha;Porucha pohonu;120;Marek Dobiaš;Uzavretá
+UD-2026-1216;19.09.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Porucha pohonu;60;Juraj Bielik;Uzavretá
+UD-2026-1217;19.09.2026;R400 Javorník;Stred;V434;Odpojovač;Výstraha;Zvýšená teplota svorky;120;Pavol Ševčík;Uzavretá
+UD-2026-1218;20.09.2026;R220 Dolná Ves;Západ;T201;DC napájanie;Výstraha;Usmerňovač;90;Juraj Bielik;Uzavretá
+UD-2026-1219;22.09.2026;R220 Dolná Ves;Západ;V222;Vypínač;Porucha;Porucha pohonu;30;Pavol Ševčík;Uzavretá
+UD-2026-1220;22.09.2026;R400 Horné Lúky;Západ;V423;Ochrana;Výstraha;Porucha terminálu;20;Tomáš Repka;Uzavretá
+UD-2026-1221;25.09.2026;R220 Dolná Ves;Západ;T201;DC napájanie;Porucha;Batéria;75;Juraj Bielik;Uzavretá
+UD-2026-1222;26.09.2026;R220 Dolná Ves;Západ;T201;DC napájanie;Porucha;Usmerňovač;75;Pavol Ševčík;Uzavretá
+UD-2026-1223;01.10.2026;R400 Horné Lúky;Západ;V421;Odpojovač;Porucha;Porucha pohonu;60;Marek Dobiaš;V riešení
+UD-2026-1224;03.10.2026;R400 Javorník;Stred;V432;Prístrojový transformátor;Vypnutie ochranou;Neznáma;150;Pavol Ševčík;V riešení
+UD-2026-1225;03.10.2026;R220 Dolná Ves;Západ;V221;Vypínač;Porucha;Opotrebenie;330;Juraj Bielik;Uzavretá
+UD-2026-1226;04.10.2026;R400 Horné Lúky;Západ;V421;Vypínač;Výstraha;Opotrebenie;90;Tomáš Repka;Uzavretá
+UD-2026-1227;07.10.2026;R400 Javorník;Stred;V431;Vypínač;Porucha;Opotrebenie;120;Pavol Ševčík;Uzavretá
+UD-2026-1228;07.10.2026;R400 Horné Lúky;Západ;T401;DC napájanie;Vypnutie ochranou;Batéria;150;Tomáš Repka;Otvorená
+UD-2026-1229;09.10.2026;R400 Horné Lúky;Západ;V421;Odpojovač;Výstraha;Zvýšená teplota svorky;75;Marek Dobiaš;Uzavretá
+UD-2026-1230;09.10.2026;R220 Dolná Ves;Západ;T201;Vypínač;Výstraha;Únik SF6;270;Juraj Bielik;Uzavretá
+UD-2026-1231;10.10.2026;R220 Dolná Ves;Západ;V221;Vypínač;Výstraha;Porucha pohonu;165;Pavol Ševčík;Uzavretá
+UD-2026-1232;10.10.2026;R400 Horné Lúky;Západ;V421;Vypínač;Porucha;Únik SF6;75;Marek Dobiaš;Uzavretá
+UD-2026-1233;11.10.2026;R400 Horné Lúky;Západ;T401;Vypínač;Porucha;Porucha pohonu;30;Tomáš Repka;V riešení
+UD-2026-1234;13.10.2026;R400 Horné Lúky;Západ;V423;Vypínač;Porucha;Porucha pohonu;45;Marek Dobiaš;Uzavretá
+UD-2026-1235;14.10.2026;R400 Javorník;Stred;V434;Ochrana;Výstraha;Neznáma;150;Pavol Ševčík;Otvorená
+UD-2026-1236;15.10.2026;R400 Javorník;Stred;V432;Vypínač;Porucha;Opotrebenie;150;Tomáš Repka;V riešení
+UD-2026-1237;17.10.2026;R220 Dolná Ves;Západ;T202;Odpojovač;Vypnutie ochranou;Porucha pohonu;330;Pavol Ševčík;V riešení
+UD-2026-1238;20.10.2026;R400 Horné Lúky;Západ;V422;Vypínač;Porucha;Porucha pohonu;20;Tomáš Repka;V riešení
+UD-2026-1239;20.10.2026;R400 Javorník;Stred;V432;Ochrana;Porucha;Chyba komunikácie;45;Tomáš Repka;Uzavretá
+UD-2026-1240;20.10.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Opotrebenie;240;Pavol Ševčík;Uzavretá
+UD-2026-1241;20.10.2026;R220 Dolná Ves;Západ;T202;Vypínač;Porucha;Únik SF6;215;Juraj Bielik;Uzavretá
+UD-2026-1242;21.10.2026;R400 Horné Lúky;Západ;T401;Vypínač;Výstraha;Únik SF6;20;Tomáš Repka;Otvorená
+UD-2026-1243;21.10.2026;R400 Javorník;Stred;V432;Odpojovač;Porucha;Zvýšená teplota svorky;90;Tomáš Repka;Uzavretá
+UD-2026-1244;23.10.2026;R220 Dolná Ves;Západ;T201;Transformátor;Výstraha;Plyny v oleji;80;Pavol Ševčík;Otvorená
+UD-2026-1245;23.10.2026;R400 Javorník;Stred;V432;Vypínač;Výstraha;Únik SF6;60;Pavol Ševčík;Uzavretá
+UD-2026-1246;23.10.2026;R400 Javorník;Stred;V433;Ochrana;Vypnutie ochranou;Chyba komunikácie;150;Pavol Ševčík;Uzavretá
+UD-2026-1247;24.10.2026;R400 Horné Lúky;Západ;T401;Vypínač;Výstraha;Porucha pohonu;45;Marek Dobiaš;Otvorená
+UD-2026-1248;24.10.2026;R220 Dolná Ves;Západ;V222;Ochrana;Výstraha;Neznáma;155;Juraj Bielik;Otvorená
+UD-2026-1249;25.10.2026;R400 Javorník;Stred;V433;Vypínač;Vypnutie ochranou;Porucha pohonu;45;Pavol Ševčík;Uzavretá
+UD-2026-1250;28.10.2026;R220 Dolná Ves;Západ;T201;Vypínač;Vypnutie ochranou;Opotrebenie;300;Juraj Bielik;Uzavretá

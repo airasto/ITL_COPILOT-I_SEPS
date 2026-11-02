@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Microsoft Copilot 365 prakticky II. - prompty na cvičenia pre SEPS | IT Learning</title>
+<link rel="icon" href="logo-itlearning.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--soft:#F5FAFF;--line:#D6E6F4;--blue:#1266A3;--sky:#179CFA;--ink:#0F2B44;--muted:#557089;--tok:#E3F1FD;
+ box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(70px + env(safe-area-inset-top,0px));scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.55 Barlow,"Segoe UI",Arial,sans-serif}
+h1,h2,h3{font-family:"Barlow Semi Condensed",Barlow,"Segoe UI",Arial,sans-serif;line-height:1.15;margin:0}
+a{color:var(--blue)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 22px}
+header.top{background:var(--soft);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
+header.top img{height:76px;width:auto;display:block}
+header.top .kurz{color:var(--muted);font-size:15px;text-align:right}
+.hero{padding-top:44px;padding-bottom:26px}
+.hero h1{font-size:clamp(34px,5vw,50px);color:var(--blue);font-weight:700}
+.hero .sub{font-size:20px;margin:8px 0 18px;color:var(--ink)}
+.hero p{max-width:68ch;color:var(--muted);margin:0}
+.kroky{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:28px 0 0;padding:0;list-style:none;counter-reset:k;border-top:3px solid var(--blue)}
+.kroky li{counter-increment:k;padding:16px 18px 6px 0}
+.kroky li::before{content:counter(k);font:700 30px/1 "Barlow Semi Condensed",sans-serif;color:var(--sky);display:block;margin-bottom:6px}
+.kroky b{display:block;font-weight:600}
+.kroky span{color:var(--muted);font-size:15.5px}
+.ctx{background:var(--soft);border:1px solid var(--line);border-radius:10px;padding:22px 24px;margin:30px 0 10px}
+.ctx h2{font-size:26px;color:var(--blue)}
+.ctx p.note{color:var(--muted);margin:4px 0 14px;font-size:15.5px}
+.presets{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.presets button{font:500 15px Barlow,sans-serif;border:1px solid var(--blue);background:#fff;color:var(--blue);padding:6px 14px;border-radius:999px;cursor:pointer}
+.presets button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 18px}
+.fields label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:3px}
+.fields input{width:100%;font:400 16px Barlow,sans-serif;padding:8px 10px;border:1px solid var(--line);border-radius:6px;background:#fff;color:var(--ink)}
+.fields input:focus{outline:2px solid var(--sky);outline-offset:0;border-color:var(--sky)}
+.fields .full{grid-column:1/-1}
+nav.moduly{position:sticky;top:0;z-index:5;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top,0px)}
+nav.moduly .wrap{display:flex;align-items:center;gap:6px;overflow-x:auto;padding-top:10px;padding-bottom:10px}
+nav.moduly a{white-space:nowrap;text-decoration:none;color:var(--ink);font-weight:500;padding:6px 12px;border-radius:6px;font-size:15.5px}
+nav.moduly a:hover,nav.moduly a:focus-visible{background:var(--soft);color:var(--blue)}
+nav.moduly a b{color:var(--sky);margin-right:4px}
+nav.moduly .sp{flex:1}
+nav.moduly label{white-space:nowrap;font-size:15px;display:flex;align-items:center;gap:6px;cursor:pointer;color:var(--blue);font-weight:600}
+section.modul{padding:46px 0 10px}
+.mhead{display:grid;grid-template-columns:auto 1fr;gap:4px 18px;align-items:baseline;border-bottom:3px solid var(--blue);padding-bottom:14px}
+.mhead .num{grid-row:span 2;font:700 64px/0.9 "Barlow Semi Condensed",sans-serif;color:var(--sky)}
+.mhead h2{font-size:32px;color:var(--blue)}
+.mhead p{margin:0;color:var(--muted)}
+h3.kat{font-size:21px;color:var(--ink);margin:30px 0 4px}
+article.pr{border-bottom:1px solid var(--line);padding:20px 0 22px}
+.prhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 12px}
+.prhead .id{font:700 18px "Barlow Semi Condensed",sans-serif;color:var(--sky);min-width:30px}
+.prhead h4{margin:0;font:600 20px/1.25 Barlow,sans-serif;color:var(--ink)}
+.badge{font-size:13.5px;padding:2px 9px;border-radius:999px;background:var(--soft);border:1px solid var(--line);color:var(--blue);font-weight:500}
+.badge.zak{background:var(--blue);border-color:var(--blue);color:#fff}
+.pbox{position:relative;margin:12px 0 10px;background:var(--soft);border-left:4px solid var(--blue);border-radius:0 8px 8px 0}
+.pbox pre{margin:0;padding:16px 18px 16px 18px;white-space:pre-wrap;word-wrap:break-word;font:400 16px/1.55 Barlow,"Segoe UI",Arial,sans-serif;color:var(--ink);max-height:none}
+.tok{background:var(--tok);color:var(--blue);font-weight:600;border-radius:4px;padding:0 3px;box-decoration-break:clone;-webkit-box-decoration-break:clone}
+.tok.empty{color:#9a5a00;background:#FFF4E0}
+.copy{font:600 15px Barlow,sans-serif;background:var(--blue);color:#fff;border:0;border-radius:6px;padding:7px 16px;cursor:pointer}
+.copy:hover{background:#0d5487}.copy.ok{background:#1b8a4e}
+.copy:focus-visible,.presets button:focus-visible{outline:3px solid var(--sky);outline-offset:2px}
+.akcie{display:flex;justify-content:flex-end;margin-top:-4px}
+.det{display:grid;grid-template-columns:1fr 1fr;gap:6px 28px;margin-top:10px;font-size:15.5px}
+.det h5{margin:8px 0 2px;font-size:14px;color:var(--blue);font-weight:600}
+.det ol{margin:0;padding-left:20px}
+.det p{margin:0;color:var(--ink)}
+.det .files a{display:inline-block;margin:0 10px 2px 0}
+.det .bez{color:var(--muted)}
+body.len-zaklad article.pr:not(.jadro){display:none}
+body.len-zaklad h3.kat.prazdna{display:none}
+.mat{padding-top:56px;padding-bottom:20px}
+.mat h2{font-size:32px;color:var(--blue);border-bottom:3px solid var(--blue);padding-bottom:12px}
+.mat p{color:var(--muted);max-width:70ch}
+.zip{display:inline-block;margin:6px 0 18px;background:var(--blue);color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:6px}
+.zip:hover{background:#0d5487}
+.flist{width:100%;border-collapse:collapse;font-size:16px}
+.flist td{border-bottom:1px solid var(--line);padding:9px 8px 9px 0;vertical-align:top}
+.flist td:first-child{white-space:nowrap}
+.tbl{overflow-x:auto}
+footer{margin-top:40px;background:var(--soft);border-top:1px solid var(--line);padding:24px 0;color:var(--muted);font-size:15px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:10px 28px;justify-content:space-between}
+.herogrid{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:start}
+.qr{text-align:center;margin:0;padding:12px;border:1px solid var(--line);border-radius:10px;background:#fff}
+.qr img{width:170px;height:170px;display:block}
+.qr figcaption{font-size:14px;color:var(--muted);margin-top:6px;max-width:170px}
+@media (max-width:760px){
+ .herogrid{grid-template-columns:1fr}.qr{display:none}
+ .kroky{grid-template-columns:1fr}.fields{grid-template-columns:1fr}.det{grid-template-columns:1fr}
+ header.top img{height:54px}header.top .kurz{display:none}
+ .mhead .num{font-size:48px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="top"><div class="wrap">
+ <a href="https://www.itlearning.sk" aria-label="IT Learning Slovakia"><img src="logo-itlearning.png" alt="IT Learning Slovakia"></a>
+ <div class="kurz">Kurz Microsoft Copilot 365 prakticky II.<br>Cvičenia pre technikov SEPS</div>
+</div></header>
+
+<main>
+<div class="wrap hero">
+ <div class="herogrid"><div>
+ <h1>Prompty na cvičenia</h1>
+ <p class="sub">Copilot vo Worde, Exceli, PowerPointe, Outlooku a Teams</p>
+ <p class="nb">Ku každému z piatich modulov kurzu nájdete sadu promptov. Cvičenia označené ako základné stihne každý, ostatné sú pre tých, ktorí chcú ísť ďalej. Vyplňte svoj kontext a prompty sa prispôsobia vašej role. Pracujete vo vlastnom prostredí Microsoft 365 s licenciou Copilot, na vlastných dokumentoch, e-mailoch a meetingoch alebo na cvičných podkladoch fiktívneho úseku správy rozvodní, ktoré si môžete stiahnuť.</p>
+ </div>
+ </div>
+ <ol class="kroky">
+  <li><b>Vyplňte svoj kontext</b><span>Vyberte rolu, ktorá je vám najbližšie, a upravte polia podľa seba.</span></li>
+  <li><b>Skopírujte prompt</b><span>Vložte ho do aplikácie uvedenej pri cvičení. Údaje zvýraznené modrou sa doplnili z vášho kontextu.</span></li>
+  <li><b>Skontrolujte a dolaďte</b><span>Výstup overte, upravujte ho ďalšími pokynmi a skúšajte vlastné varianty.</span></li>
+ </ol>
+
+ <section class="ctx" aria-labelledby="ctx-h">
+  <h2 id="ctx-h">Váš kontext</h2>
+  <p class="note">Údaje zostávajú len vo vašom prehliadači. Nikam sa neodosielajú.</p>
+  <div class="presets" id="presets" role="group" aria-label="Vzorové roly"></div>
+  <div class="fields" id="fields"></div>
+ </section>
+</div>
+
+<nav class="moduly" aria-label="Moduly"><div class="wrap" id="nav"></div></nav>
+
+<div class="wrap" id="obsah"></div>
+
+<div class="wrap mat" id="podklady">
+ <h2>Podklady na vyskúšanie</h2>
+ <p class="nb">Ak nechcete pracovať s vlastnými dokumentmi, použite podklady fiktívneho úseku správy rozvodní Západ s rozvodňami R400 Horné Lúky, R400 Javorník a R220 Dolná Ves. Všetky mená, čísla a údaje sú vymyslené a nevychádzajú z interných dokumentov SEPS. Súbory nahrajte do svojho OneDrive, aby ste ich mohli otvoriť vo Worde, Exceli a PowerPointe a odkazovať na ne cez lomku „/“ v Copilote.</p>
+ <a class="zip" href="podklady-vsetko.zip" download>Stiahnuť všetky podklady (ZIP)</a>
+ <div class="tbl"><table class="flist" id="flist"></table></div>
+</div>
+</main>
+
+<footer><div class="wrap">
+ <span>IT Learning Slovakia - kurz Microsoft Copilot 365 prakticky II. - cvičenia pre SEPS</span>
+ <span><a href="https://www.itlearning.sk">itlearning.sk</a> &nbsp; <a href="https://www.itlearning.sk/videoclass">Bezplatné videokurzy a návody</a></span>
+</div></footer>
+<script>
+const MODULY=[
+ {n:1,nazov:"Copilot s firemnými dátami",kratko:"Firemné dáta",popis:"Zapnutie a vypnutie Work IQ, odkazovanie na zdroje cez lomku, viac zdrojov v jednom prompte, Copilot Search a ranný prehľad toho, čo vám ušlo."},
+ {n:2,nazov:"Word a PowerPoint",popis:"Dokument z podkladov, úprava a kontrola textu, otázky k zmluve, Edit with Copilot a prenos obsahu z Wordu do prezentácie."},
+ {n:3,nazov:"Excel",popis:"Analýza prirodzeným jazykom, vzorce, čistenie surového exportu, grafy, viackrokové úpravy a agent Analyst. Dáta majú byť v tabuľke (Ctrl + T) a súbor ideálne v OneDrive."},
+ {n:4,nazov:"Outlook a Teams",popis:"Zhrnutie vlákien, odpovede z kontextu, plánovanie, koučing tónu, zápisnica z meetingu, catch-up a follow-up."},
+ {n:5,nazov:"Hotoví agenti a workflow",kratko:"Agenti a workflow",popis:"Researcher, Copilot Pages a Notebooks, kontrola výstupov podľa princípu Draft → Review → Refine a mini-workflow naprieč aplikáciami."}
+];
+const PROMPTY=[
+// ---------- MODUL 1 ----------
+{id:"1.1",m:1,kat:"Work IQ",nazov:"Rovnaká otázka s Work IQ a bez neho",jadro:true,nastroj:"Copilot Chat",
+ ako:["Otvorte Copilot Chat (m365.cloud.microsoft/chat). Vľavo nad poľom na prompt nájdete tlačidlo Work IQ.","Skontrolujte, že je Work IQ zapnuté (nápis nie je prečiarknutý), vložte prompt a odošlite.","Kliknite na Work IQ a vypnite ho. Nápis sa prečiarkne a automaticky sa otvorí nový chat.","Pošlite ten istý prompt znova a porovnajte obe odpovede.","Work IQ znova zapnite, ostatné cvičenia v module ho potrebujú."],
+ prompt:`Na čom som tento týždeň pracoval? Zhrň to do 5 bodov.
+
+Pri každom bode uveď, z ktorého e-mailu, dokumentu, chatu alebo meetingu informácia pochádza a či ide o firemný zdroj, alebo o web.`,
+ tip:"So zapnutým Work IQ Copilot sám rozhodne, či použije vaše e-maily, súbory, chaty a meetingy, web, alebo oboje. Bez Work IQ pracuje len s webom a s tým, čo mu priložíte. Ak chcete zdroje obmedziť aj so zapnutým Work IQ, napíšte to do promptu: Použi len moje firemné dáta, nie web. Ak máte v tenante málo aktivity, nahrajte si cvičné podklady do OneDrive, pár minút s nimi pracujte a otázku zopakujte.",
+ podklad:null},
+{id:"1.2",m:1,kat:"Odkazovanie na zdroje",nazov:"Zhrnutie cez lomku „/“",jadro:true,nastroj:"Copilot Chat (Work IQ)",
+ ako:["V Copilot Chate so zapnutým Work IQ vložte prompt.","Text v hranatých zátvorkách zmažte, napíšte / a zo zoznamu vyberte dokument, potom e-mail.","Odošlite a skontrolujte, či Copilot čerpal len z vybraných zdrojov."],
+ prompt:`Zhrň dokument [napíšte / a vyberte dokument] a posledný e-mail od kolegu {kolega} [napíšte / a vyberte e-mail].
+
+Priprav z toho stručné zhrnutie pre manažment:
+- 3 kľúčové body,
+- otvorené otázky,
+- jedno odporúčanie.
+
+Rozsah najviac 150 slov.`,
+ tip:"Konkrétny zdroj = konkrétny výstup. S cvičnými podkladmi vyberte projektovú kartu Výmena ochrán a ako e-mail si pošlite text z e-mailového vlákna.",
+ podklad:["07_SEPS_Projektova_karta_vymena_ochran.docx","19_SEPS_Emailove_vlakno_terminaly.docx"]},
+{id:"1.3",m:1,kat:"Odkazovanie na zdroje",nazov:"Tri zdroje v jednom prompte",jadro:false,nastroj:"Copilot Chat (Work IQ)",
+ ako:["Vložte prompt do Copilot Chatu so zapnutým Work IQ.","Na miesta v hranatých zátvorkách vložte cez / dokument, e-mail a meeting (alebo tretí dokument).","Odošlite a overte aspoň jeden rozpor, ktorý Copilot našiel."],
+ prompt:`Použi tieto tri zdroje: [/ dokument], [/ e-mail od kolegu {kolega}] a [/ meeting alebo ďalší dokument].
+
+Porovnaj ich a vypíš:
+1. v čom sa zdroje zhodujú,
+2. kde si protirečia alebo sa líšia čísla a termíny,
+3. riziká,
+4. rozhodnutia, ktoré zostávajú otvorené, a kto by ich mal urobiť.
+
+Pri každom bode uveď, z ktorého zdroja vychádza.`,
+ tip:"Prínos Copilota je v syntéze viacerých zdrojov. Cvičné podklady sú pripravené tak, aby sa v termínoch a dohodách mierne líšili.",
+ podklad:["07_SEPS_Projektova_karta_vymena_ochran.docx","15_SEPS_Poznamky_z_porady_vymena_ochran.docx","19_SEPS_Emailove_vlakno_terminaly.docx"]},
+{id:"1.4",m:1,kat:"Odkazovanie na zdroje",nazov:"Copilot Search: hľadanie zámerom",jadro:false,nastroj:"Copilot Search",
+ ako:["Otvorte aplikáciu Microsoft 365 Copilot a vľavo zvoľte Hľadať (Search).","Vložte otázku do vyhľadávacieho poľa.","Otvorte aspoň jeden zdroj z odpovede a overte ho."],
+ prompt:`Kde nájdem najaktuálnejšie informácie o projekte {projekt}? Kto na ňom pracuje, aký je jeho stav a aké dokumenty k nemu existujú?`,
+ tip:"Pýtajte sa na to, čo potrebujete vedieť, nie na názov súboru. S cvičnými podkladmi skúste: Aké pravidlá platia pre schvaľovanie objednávok náhradných dielov a kto ich schvaľuje?",
+ bez:"Ak Copilot Search nemáte, položte rovnakú otázku v Copilot Chate so zapnutým Work IQ.",
+ podklad:["06_SEPS_Katalog_nahradnych_dielov.docx"]},
+{id:"1.5",m:1,kat:"Prehľad práce",nazov:"Čo mi ušlo za týždeň",jadro:true,nastroj:"Copilot Chat (Work IQ)",
+ ako:["Vložte prompt do Copilot Chatu so zapnutým Work IQ.","Pri bodoch, ktoré vás prekvapia, kliknite na odkaz na zdroj."],
+ prompt:`Zhrň, čo dôležité sa udialo v mojich projektoch, e-mailoch a meetingoch za posledných 7 dní.
+
+Rozdeľ to na:
+- rozhodnutia, ktoré padli,
+- úlohy, ktoré mám na sebe, aj s termínom,
+- veci, ktoré čakajú na moju odpoveď,
+- čo môžem pokojne ignorovať.
+
+Pri každom bode uveď zdroj.`,
+ tip:"Vhodné ako ranná rutina alebo po dovolenke. Na konci dňa skúste variant: Aké otvorené úlohy a rozhodnutia mám z e-mailov a meetingov za tento týždeň?",
+ podklad:null},
+{id:"1.6",m:1,kat:"Prehľad práce",nazov:"Príprava pred stretnutím",jadro:false,nastroj:"Copilot Chat (Work IQ)",
+ ako:["Vložte prompt do Copilot Chatu so zapnutým Work IQ.","Meno kolegu môžete označiť aj cez / alebo @, aby Copilot vedel, o koho ide.","Pokračujte doplňujúcou otázkou, napríklad: Navrhni aj agendu stretnutia."],
+ prompt:`Priprav mi podklady na najbližšie stretnutie s {kolega} o projekte {projekt}.
+
+Pozri si našu e-mailovú komunikáciu za posledné 2 týždne, súbory k projektu a akčné body z nášho posledného meetingu v Teams.
+
+Zhrň:
+- kde sme v projekte,
+- čo zostáva otvorené,
+- čo odo mňa {kolega} očakáva,
+- 3 otázky, ktoré by som mal na stretnutí položiť.
+
+Výstup na 1 stranu A4.`,
+ tip:"Prompt kombinuje konkrétnu osobu, projekt, viaceré zdroje a presný formát výstupu. Tieto štyri prvky použite aj vo vlastných promptoch.",
+ podklad:null},
+{id:"1.7",m:1,kat:"Prehľad práce",nazov:"Čo Copilot vidí",jadro:false,nastroj:"Copilot Chat (Work IQ)",
+ ako:["V Copilot Chate skontrolujte, že je zapnuté Work IQ.","Vložte prompt.","Ak nájdete dokument, ktorý by ste nemali vidieť, neotvárajte ho a nahláste ho IT oddeleniu alebo vlastníkovi."],
+ prompt:`Vyhľadaj dokumenty, ku ktorým mám prístup a ktoré obsahujú mzdy, platové výmery, rodné čísla alebo hodnotenia zamestnancov.
+
+Vypíš len názov dokumentu, jeho umiestnenie a kto ho vytvoril. Obsah dokumentov necituj.`,
+ tip:"Copilot vidí len to, k čomu máte prístup aj vy. Ak niečo nájdete, problém je v nastavení oprávnení. Copilot ho len zviditeľnil.",
+ podklad:null},
+// ---------- MODUL 2 ----------
+{id:"2.1",m:2,kat:"Word: tvorba a úprava",nazov:"Report pre vedenie z podkladov",jadro:true,nastroj:"Word",
+ ako:["Nahrajte podklady do OneDrive.","Vo Worde otvorte nový prázdny dokument a kliknite na ikonu Copilota (Koncept s Copilotom).","Vložte prompt a na konci cez / pripojte podklady (najviac 3 súbory).","Výsledok si uložte, použijete ho v cvičeniach 2.5 a 5.5."],
+ prompt:`Priprav 2-stranový report pre vedenie o projekte {projekt} z pripojených podkladov.
+
+Štruktúra:
+- úvod: o čo ide a prečo report vzniká,
+- aktuálny stav a plnenie míľnikov,
+- riziká a opatrenia,
+- rozhodnutia, ktoré potrebujeme od vedenia,
+- záver s jedným odporúčaním.
+
+Tón: vecný a formálny. Krátke odseky s medzititulkami. Čísla a termíny preber presne z podkladov a nič nedopĺňaj.
+
+Podklady: [napíšte / a vyberte súbory]`,
+ tip:"S cvičnými podkladmi zvoľte rolu Projekty obnovy (projekt Výmena ochrán R400 Horné Lúky). Pri vlastnej práci pripojte prezentáciu, poznámky z meetingu alebo PDF.",
+ podklad:["07_SEPS_Projektova_karta_vymena_ochran.docx","15_SEPS_Poznamky_z_porady_vymena_ochran.docx"]},
+{id:"2.2",m:2,kat:"Word: tvorba a úprava",nazov:"Kontrola a úprava textu",jadro:false,nastroj:"Word",
+ ako:["Otvorte článok vo Worde a spustite Copilota (panel vpravo).","Vložte prompt.","Potom pokračujte, napríklad: Oprav body 1, 2 a 4 priamo v dokumente.","Pre zmenu tónu označte odsek, kliknite na ikonu Copilota pri texte a zvoľte Prepísať."],
+ prompt:`Skontroluj tento článok. Vypíš zoznam chýb rozdelený na:
+1. pravopis a gramatika,
+2. čiarky a interpunkcia,
+3. opakujúce sa slová a zbytočne dlhé vety,
+4. text v cudzom jazyku,
+5. obsahové slabiny, napríklad záver, ktorý len opakuje úvod.
+
+Pri každej chybe uveď pôvodné znenie a návrh opravy. Do dokumentu zatiaľ nič nemeň, opravy vyberieme spolu.`,
+ tip:"Postup „najprv zoznam, potom opravy“ vám dáva kontrolu nad tým, čo sa v texte zmení. Funguje na e-maily, ponuky aj interné smernice.",
+ podklad:["16_SEPS_Clanok_s_chybami.docx"]},
+{id:"2.3",m:2,kat:"Word: otázky k dokumentu",nazov:"Analýza zmluvy pre neprávnika",jadro:true,nastroj:"Word",
+ ako:["Otvorte zmluvu vo Worde a spustite Copilota.","Vložte prompt.","Pri každom nevýhodnom ustanovení si v texte overte, či ho Copilot uviedol správne."],
+ prompt:`Pracujem vo firme {firma} a za objednávateľa budem preberať dielo. Toto je návrh zmluvy o dielo od zhotoviteľa. Prečítaj ju a odpovedz zrozumiteľne pre neprávnika:
+
+1. Kto sú zmluvné strany a čo je predmetom zmluvy?
+2. Aké sú lehoty dodania a čo sa stane, keď zhotoviteľ mešká?
+3. Ktoré ustanovenia sú pre nás nevýhodné? Pri každom uveď článok, prečo je nevýhodné a návrh úpravy.
+4. Protirečí si zmluva niekde sama sebe?
+5. Čo by sme mali pred podpisom ešte vyjednať?
+
+Pri každej odpovedi uveď číslo článku.`,
+ tip:"Výsledok slúži na orientáciu. Pred podpisom zmluvu posúdi právnik. Rovnako sa pýtajte na technické podmienky, ponuky dodávateľov alebo návody výrobcov.",
+ bez:"Ak Copilot vo Worde nemáte k dispozícii, priložte súbor do Copilot Chatu a použite rovnaký prompt.",
+ podklad:["17_SEPS_Zmluva_o_dielo_navrh.docx"]},
+{id:"2.4",m:2,kat:"Word: otázky k dokumentu",nazov:"Edit with Copilot: celý dokument na jeden pokyn",jadro:false,nastroj:"Word",
+ ako:["Otvorte dokument vo Worde (uložený v OneDrive).","V paneli Copilota zvoľte režim Edit with Copilot (predtým Agent mode). Ak sa ponúka výber modelu, vyskúšajte oba.","Vložte prompt a sledujte plán zmien.","Zmeny prejdite a prijmite alebo odmietnite."],
+ prompt:`Uprav celý dokument:
+1. zjednoť tón na vecný a priateľský, s vykaním,
+2. skráť ho približne o tretinu bez straty pravidiel,
+3. na začiatok pridaj zhrnutie v 5 bodoch,
+4. nadpisy sekcií prepíš do formy otázok, ktoré si kladie zamestnanec,
+5. na koniec pridaj sekciu „Na koho sa obrátiť“.
+
+Pred úpravou mi napíš plán zmien.`,
+ tip:"Zodpovednosť za výsledok zostáva na vás. Po úprave sa spýtajte: Ktoré pravidlá z pôvodného dokumentu si vynechal alebo zmenil?",
+ bez:"Ak Edit with Copilot nemáte, zadávajte body promptu postupne, jeden po druhom.",
+ podklad:["03_SEPS_Smernica_pohotovosti_v2.docx"]},
+{id:"2.5",m:2,kat:"PowerPoint",nazov:"Prezentácia z Word dokumentu",jadro:true,nastroj:"PowerPoint",
+ ako:["Report z cvičenia 2.1 uložte do OneDrive.","V PowerPointe otvorte novú prezentáciu, ideálne z firemnej šablóny, a spustite Copilota.","Vložte prompt a cez / vyberte report.","Prejdite snímky a opravte, čo nesedí."],
+ prompt:`Vytvor prezentáciu pre vedenie zo súboru [napíšte / a vyberte report z cvičenia 2.1].
+
+Najviac 8 snímok: titulná snímka, zhrnutie, stav projektu, riziká, rozhodnutia pre vedenie, odporúčanie a ďalšie kroky.
+
+Na snímke najviac 4 body, každý najviac 10 slov. Čísla a termíny preber presne z dokumentu.`,
+ tip:"Ak otvoríte prezentáciu z firemnej šablóny, Copilot použije jej dizajn. Bez reportu z 2.1 môžete vybrať cvičnú projektovú kartu.",
+ podklad:["07_SEPS_Projektova_karta_vymena_ochran.docx"]},
+{id:"2.6",m:2,kat:"PowerPoint",nazov:"Poznámky pre rečníka a úpravy celej prezentácie",jadro:false,nastroj:"PowerPoint",
+ ako:["Otvorte prezentáciu z cvičenia 2.5.","V Copilotovi zvoľte režim Edit with Copilot (Agent mode), ak ho máte.","Vložte prompt a skontrolujte zmeny na každej snímke."],
+ prompt:`Uprav celú prezentáciu:
+1. ku každej snímke doplň poznámky pre rečníka: 3-5 viet, čo povedať nahlas nad rámec textu na snímke,
+2. zjednoť nadpisy, všetky nech sú vo forme otázky,
+3. na koniec pridaj snímku s rizikami a ich vlastníkmi,
+4. obsah prispôsob na 10 minút prezentovania.
+
+Na záver vypíš, čo si zmenil.`,
+ tip:"Poznámky pre rečníka sa hodia aj vtedy, keď prezentáciu odovzdávate kolegovi, ktorý ju bude prezentovať namiesto vás.",
+ bez:"Bez Edit with Copilot zadajte body jednotlivo, poznámky pre rečníka si vypýtajte ku každej snímke zvlášť.",
+ podklad:null},
+{id:"2.7",m:2,kat:"PowerPoint",nazov:"Príprava na otázky z publika",jadro:false,nastroj:"PowerPoint",
+ ako:["Otvorte hotovú prezentáciu a spustite Copilota.","Vložte prompt."],
+ prompt:`Priprav ma na otázky po tejto prezentácii. Publikum: {publikum}.
+
+Navrhni:
+- 5 otázok, ktoré môže publikum položiť, a ku každej stručnú odpoveď (najviac 3 vety),
+- 2 otázky od skeptika, ktorý nie je presvedčený, že to má zmysel,
+- 1 nepríjemnú otázku, ktorá ma môže zaskočiť, a odporúčanú odpoveď.
+
+Odpovede píš prirodzene, tak ako by som ich povedal nahlas.`,
+ tip:"Copilot dokáže myslieť za publikum. Zmeňte publikum v kontexte (vedenie, zákazník, nový tím) a porovnajte, ako sa zmenia otázky.",
+ podklad:null},
+{id:"2.8",m:2,kat:"PowerPoint",nazov:"Office agent v Copilot Chate",jadro:false,nastroj:"Copilot Chat → Word",
+ ako:["V Copilot Chate vyberte v zozname agentov alebo nástrojov Word (pri prezentácii PowerPoint).","Vložte prompt, odpovedzte na otázky a koncept upravujte v rozhovore.","Hotový dokument otvorte vo Worde."],
+ prompt:`Vytvor koncept jednostranového dokumentu „Ako pracujeme s Copilotom v oddelení {oddelenie}“ pre kolegov.
+
+Najprv mi polož 3 otázky o tom, ako naše oddelenie pracuje. Vždy polož len jednu otázku a počkaj na odpoveď.
+
+Potom napíš koncept:
+- na čo Copilot používame,
+- 5 overených promptov pre našu prácu,
+- čo Copilotu nezverujeme,
+- na koho sa obrátiť s otázkami.`,
+ tip:"Agent v Chate sa hodí na nový koncept od nuly. Existujúci dokument dolaďujte priamo vo Worde, kde Copilot vidí celý jeho obsah.",
+ bez:"Ak agenta Word v Chate nevidíte, použite bežný Copilot Chat a výsledok vložte do Wordu alebo zvoľte Upraviť na stránke (Pages).",
+ podklad:null},
+// ---------- MODUL 3 ----------
+{id:"3.1",m:3,kat:"Analýza a vzorce",nazov:"Analýza prirodzeným jazykom",jadro:true,nastroj:"Excel",
+ ako:["Otvorte súbor s udalosťami v Exceli a kliknite do tabuľky.","Spustite Copilota (Domov → Copilot).","Otázky zadávajte postupne, každú zvlášť.","Pri výsledkoch kliknite na Pridať do nového hárka, ak to Copilot ponúkne."],
+ prompt:`Pri ktorom type zariadenia počet udalostí rastie a pri ktorom klesá za posledné 3 kvartály?
+
+Vytvor súhrn počtu udalostí a celkového trvania podľa rozvodní a označ odchýlky od priemeru.
+
+Aké sú 3 najväčšie odchýlky v poslednom mesiaci oproti priemeru predchádzajúcich mesiacov a čím môžu byť spôsobené?`,
+ tip:"Na vlastnej tabuľke zmeňte názvy (zariadenie, rozvodňa, mesiac) podľa stĺpcov vo vašich dátach. Údaje, ktoré interné pravidlá nedovoľujú zdieľať, pred prácou odstráňte.",
+ podklad:["11_seps_udalosti_2026.xlsx"]},
+{id:"3.2",m:3,kat:"Analýza a vzorce",nazov:"Vysvetlenie a návrh vzorca",jadro:true,nastroj:"Excel",
+ ako:["Otvorte súbor Plnenie plánu údržby, hárok Plnenie, a spustite Copilota.","Zadajte prvú otázku, potom druhú.","Navrhnutý vzorec vložte do prázdnej bunky a skontrolujte výsledok.","Vyskúšajte aj Formula Completion: do prázdnej bunky napíšte = a sledujte návrh."],
+ prompt:`Vysvetli mi po ľudsky, čo robí vzorec v stĺpci Hodnotenie. Uveď príklad na jednom riadku tabuľky.
+
+Navrhni vzorec, ktorý spočíta vykonané úkony len pre rozvodňu R220 Dolná Ves. Použi slovenský Excel s oddeľovačom ;.`,
+ tip:"Vysvetlenie porovnajte s hárkom Pravidlá hodnotenia. Na vlastnom súbore sa pýtajte na vzorec, ktorý zdedíte po kolegovi.",
+ podklad:["18_seps_plnenie_planu_udrzby.xlsx"]},
+{id:"3.3",m:3,kat:"Čistenie a grafy",nazov:"Čistenie surového exportu",jadro:true,nastroj:"Excel",
+ ako:["Otvorte surový export udalostí v Exceli.","Spustite Copilota, ideálne v režime Edit with Copilot.","Vložte prompt.","Skontrolujte niekoľko opravených riadkov v porovnaní s pôvodnými."],
+ prompt:`Tento hárok je surový export udalostí z riadiaceho systému. Priprav ho na analýzu:
+1. odstráň úvodné riadky nad hlavičkou a údaje premeň na tabuľku,
+2. zjednoť formát dátumu a času na DD. MM. RRRR HH:MM,
+3. zjednoť názvy rozvodní (R400 Horné Lúky, R400 Javorník, R220 Dolná Ves) a názvy signálov,
+4. hodnoty tlaku preveď na číslo v MPa a teploty na číslo v °C, jednotky daj do názvu stĺpca,
+5. stav zjednoť na Príchod a Odchod a mená v stĺpci potvrdil uveď vo formáte Meno Priezvisko,
+6. nájdi duplicitné riadky a označ ich,
+7. vypíš riadky s chýbajúcimi údajmi.
+
+Výsledok daj do nového hárka a pôvodný nechaj bez zmeny. Na záver napíš, koľko riadkov si opravil a koľko duplicít si našiel.`,
+ tip:"Rovnako pripravíte export z Access databázy signálov alebo z iného systému. Čím presnejšie opíšete, ako majú vyzerať správne hodnoty, tým menej opráv.",
+ bez:"Bez Edit with Copilot zadávajte body postupne a po každom kroku skontrolujte výsledok.",
+ podklad:["14_seps_export_udalosti_surovy.xlsx"]},
+{id:"3.4",m:3,kat:"Čistenie a grafy",nazov:"Graf plnenia plánu údržby",jadro:false,nastroj:"Excel",
+ ako:["Otvorte súbor Plnenie plánu údržby a spustite Copilota.","Vložte prompt.","Skontrolujte, či graf počíta so správnymi stĺpcami a súčtami."],
+ prompt:`Zobraz plnenie plánu údržby po mesiacoch za celý úsek ako stĺpcový graf. Zvýrazni mesiace pod plánom červenou farbou a pridaj referenčnú čiaru na úrovni 100 %.
+
+Pod graf napíš dve vety, čo z neho vyplýva.`,
+ tip:"Graf je taký dobrý, aké sú dáta pod ním. Pred generovaním skontrolujte vstupy. Ďalej skúste: Zmeň graf na čiarový a pridaj rozvodne ako samostatné rady.",
+ podklad:["18_seps_plnenie_planu_udrzby.xlsx"]},
+{id:"3.5",m:3,kat:"Pokročilé",nazov:"Edit with Copilot v Exceli",jadro:false,nastroj:"Excel",
+ ako:["Otvorte súbor s udalosťami a v Copilotovi zvoľte Edit with Copilot (Agent mode).","Vložte prompt a sledujte jednotlivé kroky.","Po dokončení kliknite do niekoľkých nových buniek a skontrolujte vzorce."],
+ prompt:`V tabuľke udalostí urob tieto kroky:
+1. pridaj stĺpce Mesiac a Kvartál podľa dátumu,
+2. pridaj stĺpec Dlhá udalosť s hodnotou ÁNO pre trvanie nad 120 minút,
+3. na novom hárku Technici vytvor súhrn počtu udalostí a celkového trvania podľa technika a kvartálu,
+4. technikov zoraď podľa celkového trvania zostupne.
+
+Pred každým krokom mi napíš, čo ideš urobiť, a na konci zhrň, čo si zmenil.`,
+ tip:"Excel na pozadí niekedy pracuje inak, než sa zdá. Pri viackrokových úpravách vždy skontrolujte, čo Copilot naozaj urobil.",
+ bez:"Ak Edit with Copilot nemáte, zadávajte kroky Copilotu v Exceli postupne.",
+ podklad:["11_seps_udalosti_2026.xlsx"]},
+{id:"3.6",m:3,kat:"Pokročilé",nazov:"Agent Analyst: hypotézy nad dátami",jadro:false,nastroj:"Analyst",
+ ako:["V Copilot Chate otvorte agenta Analyst.","Priložte súbor s udalosťami a vložte prompt.","Sledujte postup uvažovania a výpočty, ktoré Analyst ukazuje."],
+ prompt:`Analyzuj priložený súbor s udalosťami na zariadeniach rozvodní ako dátový analytik.
+
+Otázka: Prečo sa počet a trvanie udalostí medzi mesiacmi tak výrazne líšia a čo ich ovplyvňuje najviac?
+
+Postupuj takto:
+1. sformuluj 3 hypotézy (napríklad ročné obdobie a počasie, typ zariadenia, rozvodňa, príčina),
+2. každú hypotézu over na dátach a ukáž výpočet,
+3. napíš, ktorá hypotéza sa potvrdila a s akou istotou,
+4. odporuč 2 kroky pre plán údržby.
+
+Ku kľúčovým zisteniam priprav graf.`,
+ tip:"Copilot v Exceli stačí na rýchle otázky. Analyst sa oplatí, keď hľadáte príčiny a potrebujete vidieť postup. Závery z dát vždy porovnajte so skúsenosťou technikov.",
+ bez:"Bez Analysta priložte súbor do bežného Copilot Chatu a použite rovnaký prompt.",
+ podklad:["11_seps_udalosti_2026.xlsx"]},
+{id:"3.7",m:3,kat:"Pokročilé",nazov:"Od surových dát k zhrnutiu pre vedenie",jadro:false,nastroj:"Excel",
+ ako:["Pracujte na vyčistenom hárku z cvičenia 3.3.","Vložte prompt do Copilota v Exceli.","Zhrnutie skopírujte do e-mailu alebo do reportu."],
+ prompt:`Na vyčistenom hárku urob:
+1. súhrn počtu signálov podľa rozvodne, signálu a mesiaca,
+2. jeden graf, ktorý najlepšie ukáže vývoj,
+3. trojvetové zhrnutie pre vedenie úseku: čo sa deje, prečo na tom záleží a čo odporúčame.`,
+ tip:"Celý reťazec (surový export → čistá tabuľka → graf → zhrnutie) môžete opakovať pri každom mesačnom prehľade.",
+ podklad:["14_seps_export_udalosti_surovy.xlsx"]},
+// ---------- MODUL 4 ----------
+{id:"4.1",m:4,kat:"Outlook",nazov:"Zhrnutie dlhého vlákna",jadro:true,nastroj:"Outlook",
+ ako:["V Outlooku otvorte dlhé e-mailové vlákno a hore kliknite na Zhrnúť (Summary by Copilot).","Pre podrobnejší výstup otvorte panel Copilota a vložte prompt."],
+ prompt:`Zhrň toto vlákno:
+- čo sa dohodlo,
+- čo čaká na rozhodnutie a kto rozhoduje,
+- kto má čo urobiť a do kedy,
+- čo sa odo mňa očakáva.
+
+Na záver napíš jednou vetou aktuálny stav.`,
+ tip:"Pred čítaním dlhého vlákna vždy začnite zhrnutím. Pri vlastnej schránke vyberte vlákno s aspoň 5 správami.",
+ bez:"Ak nemáte vhodné vlákno, otvorte cvičný podklad s e-mailovým vláknom a jeho text vložte pod prompt v Copilot Chate.",
+ podklad:["19_SEPS_Emailove_vlakno_terminaly.docx"]},
+{id:"4.2",m:4,kat:"Outlook",nazov:"Odpoveď z kontextu celého vlákna",jadro:false,nastroj:"Outlook",
+ ako:["Otvorte poslednú správu vo vlákne a kliknite na Odpovedať.","Zvoľte Copilot → Koncept s Copilotom a vložte prompt.","Návrh upravte. Nikdy ho neodosielajte bez kontroly."],
+ prompt:`Navrhni odpoveď na toto vlákno. Potvrď, čo sme už dohodli, odpovedz na otvorené otázky, ktoré sa týkajú mňa, a navrhni ďalší krok s termínom.
+
+Tón: vecný a zdvorilý, vykanie, najviac 120 slov. Ak niečo z vlákna nevieš posúdiť, nechaj v texte značku [DOPLNIŤ].`,
+ tip:"Skúste aj krátky e-mail z kľúčových slov, napríklad: stretnúť sa budúci týždeň, prejsť riziká projektu, navrhnúť stredu dopoludnia.",
+ podklad:null},
+{id:"4.3",m:4,kat:"Outlook",nazov:"Termín a agenda stretnutia",jadro:false,nastroj:"Outlook alebo Copilot Chat",
+ ako:["Vložte prompt do Copilota v Outlooku alebo do Copilot Chatu so zapnutým Work IQ.","Skontrolujte navrhnuté termíny v kalendári a pozvánku odošlite sami."],
+ prompt:`Naplánuj 30-minútový hovor s {kolega} tento alebo budúci týždeň.
+
+Navrhni 3 termíny, ktoré nekolidujú s mojím kalendárom, a agendu z našej poslednej e-mailovej komunikácie o projekte {projekt}. Agendu daj ako 3-4 body s časom.`,
+ tip:"Ak Copilot nevidí kalendár kolegu, navrhne termíny len podľa vášho. Pri kolíznom meetingu skúste: Navrhni náhradný termín pre stretnutie, ktoré mi koliduje v piatok.",
+ podklad:null},
+{id:"4.4",m:4,kat:"Outlook",nazov:"Koučing tónu citlivého e-mailu",jadro:false,nastroj:"Outlook",
+ ako:["V Outlooku vytvorte nový e-mail a vložte doň text nižšie ako vlastný koncept.","Kliknite na Copilot → Koučovanie (Coaching by Copilot) a prečítajte si odporúčania.","Potom zvoľte Prepísať alebo zadajte: Prepíš e-mail asertívne, požiadavky ponechaj a tón nech je pokojný."],
+ prompt:`Dobrý deň,
+
+už tretíkrát Vám píšem ohľadom tej dodávky. Takto sa nedá fungovať. Termín ste zase nedodržali a nás to stojí peniaze aj meno u zákazníka. Ak to do piatku nebude, budeme musieť riešiť pokuty a hľadať iného dodávateľa.
+
+Čakám odpoveď ešte dnes.
+
+S pozdravom`,
+ tip:"Koučing použite pri odmietnutiach, eskaláciách a e-mailoch vedeniu alebo zákazníkom. Rovnako ho vyskúšajte na vlastnom citlivom e-maile.",
+ podklad:null},
+{id:"4.5",m:4,kat:"Teams",nazov:"Zápisnica s action items",jadro:true,nastroj:"Teams",
+ ako:["Začnite krátky meeting (aj cvičný s kolegom) a spustite prepis: … Ďalšie → Zaznamenať a prepísať → Spustiť prepis.","Otvorte Copilota v okne meetingu (nie v chate) a vložte prompt.","Po meetingu otvorte kartu Recap a porovnajte ju so svojimi poznámkami."],
+ prompt:`Počas stretnutia sleduj prepis a priebežne zaznamenávaj kľúčové body, rozhodnutia a akčné body.
+
+Výstup po skončení:
+ZÁPIS Z PORADY
+- dátum a účastníci,
+- kľúčové body,
+- rozhodnutia (čo a kto rozhodol),
+- akčné body ako tabuľka: úloha | zodpovedná osoba | termín,
+- otvorené otázky.
+
+Buď stručný a vecný, vynechaj small talk. Úlohy bez termínu označ [DOPLNIŤ TERMÍN].`,
+ tip:"Prepis stačí na zápisnicu a je pre účastníkov menej citlivý než video záznam. Bez prepisu Copilot po skončení meetingu nič nevie.",
+ bez:"Bez meetingu otvorte cvičný podklad s prepisom porady, vložte jeho text do Copilot Chatu a použite rovnaký prompt.",
+ podklad:["20_SEPS_Prepis_porady_Teams.docx"]},
+{id:"4.6",m:4,kat:"Teams",nazov:"Catch-up zo zmeškaného meetingu",jadro:false,nastroj:"Teams",
+ ako:["V kalendári Teams otvorte meeting, ktorý prebehol s prepisom.","Na karte Recap otvorte Copilota a vložte prompt."],
+ prompt:`Nebol som na tomto meetingu. Čo dôležité sa dialo?
+
+Uveď:
+- rozhodnutia, ktoré padli,
+- moje action items,
+- čo sa týka oddelenia {oddelenie},
+- čo sa riešilo, ale zostalo otvorené.
+
+Najviac 8 bodov.`,
+ tip:"Namiesto prezerania hodinového záznamu dostanete podstatu za minútu. Pri nejasnom bode sa spýtajte: Kto to povedal a v ktorom čase?",
+ bez:"Bez záznamu meetingu použite cvičný prepis porady v Copilot Chate.",
+ podklad:["20_SEPS_Prepis_porady_Teams.docx"]},
+{id:"4.7",m:4,kat:"Teams",nazov:"Meeting → follow-up e-mail",jadro:true,nastroj:"Copilot Chat (Work IQ) → Outlook",
+ ako:["Vložte prompt do Copilot Chatu so zapnutým Work IQ alebo do Copilota na karte Recap.","Na miesto v zátvorkách vložte cez / svoj meeting.","Výsledok skopírujte do nového e-mailu v Outlooku, skontrolujte mená a termíny a odošlite."],
+ prompt:`Zo zápisu meetingu [napíšte / a vyberte meeting] priprav follow-up e-mail pre všetkých účastníkov.
+
+Obsah:
+- poďakovanie a jedna veta o cieli meetingu,
+- rozhodnutia,
+- úlohy ako tabuľka: úloha | zodpovedný | termín,
+- termín ďalšieho stretnutia.
+
+Tón: vecný, vykanie, najviac 180 slov. Úlohy bez termínu označ [DOPLNIŤ TERMÍN].`,
+ tip:"Celý reťazec recap → úlohy → follow-up zaberie pár minút. Pri cvičných podkladoch vložte prepis porady namiesto odkazu na meeting.",
+ podklad:["20_SEPS_Prepis_porady_Teams.docx"]},
+{id:"4.8",m:4,kat:"Teams",nazov:"Spätná väzba na môj prejav",jadro:false,nastroj:"Teams",
+ ako:["Otvorte Recap meetingu, na ktorom ste hovorili.","Vložte prompt do Copilota."],
+ prompt:`Na základe prepisu tohto meetingu vyhodnoť môj komunikačný štýl a daj mi konštruktívnu spätnú väzbu:
+- vyjadroval som sa jasne a držal som sa témy?
+- hovoril som primerane dlho a dal som priestor ostatným?
+- posúval som diskusiu k riešeniu?
+
+Uveď 2 veci, ktoré robím dobre, 2 konkrétne veci na zlepšenie a 1 návyk, ktorý si vyskúšam na ďalšom meetingu. Buď úprimný a konkrétny.`,
+ tip:"Spätná väzba je taká dobrá, aký kvalitný je prepis. Najlepšie funguje na meetingu, kde ste hovorili aspoň 5 minút.",
+ podklad:null},
+// ---------- MODUL 5 ----------
+{id:"5.1",m:5,kat:"Researcher",nazov:"Rešerš z webu aj firemných dát",jadro:true,nastroj:"Researcher",
+ ako:["V Copilot Chate otvorte v zozname agentov Researcher.","Vložte prompt. Researcher sa môže doplňujúco pýtať, odpovedzte mu.","Rešerš trvá niekoľko minút. Medzitým pokračujte v inom cvičení."],
+ prompt:`Priprav prehľad na tému: {tema}.
+
+Zameraj sa na Slovensko a okolité krajiny v rokoch 2025-2026. Uveď:
+- 3 hlavné trendy s konkrétnymi príkladmi,
+- 3-5 hráčov alebo riešení na trhu: pozícia, ceny, silné a slabé stránky,
+- čo z toho vyplýva pre firmu {firma}.
+
+Skombinuj verejný web s mojimi internými dokumentmi a e-mailmi k téme. Pri každom tvrdení uveď zdroj a odlíš interné zdroje od verejných.`,
+ tip:"Researcher sa hodí na konkurenčné prehľady a prípravu rozhodnutí. Pre porovnanie pošlite rovnaký prompt aj do bežného Copilot Chatu.",
+ bez:"Ak Researcher nemáte, použite Copilot Chat a prompt pošlite raz so zapnutým a raz s vypnutým Work IQ.",
+ podklad:null},
+{id:"5.2",m:5,kat:"Researcher",nazov:"Export reportu do prezentácie",jadro:false,nastroj:"Researcher",
+ ako:["Pokračujte v rozhovore s Researcherom po cvičení 5.1.","Vložte prompt alebo použite tlačidlo na export, ak ho Researcher ponúkne.","Vyskúšajte aj iný formát: PDF, infografiku alebo audio prehľad."],
+ prompt:`Z výsledku rešerše vytvor prezentáciu pre vedenie na 6 snímok:
+- zhrnutie,
+- 3 trendy,
+- porovnanie hráčov v tabuľke,
+- odporúčanie pre nás.
+
+Ku každej snímke pridaj poznámky pre rečníka a na poslednú snímku zoznam zdrojov.`,
+ tip:"Pred zdieľaním overte čísla a zdroje v prezentácii. Export prenesie aj prípadné chyby z rešerše.",
+ podklad:null},
+{id:"5.3",m:5,kat:"Pages a Notebooks",nazov:"Copilot Pages: z chatu živý dokument",jadro:false,nastroj:"Copilot Chat → Pages",
+ ako:["Pod niektorou odpoveďou v Copilot Chate kliknite na Upraviť na stránke (Edit in Pages).","Na stránke otvorte Copilota a vložte prompt.","Stránku zdieľajte s kolegom a pokračujte v nej spolu."],
+ prompt:`Uprav túto stránku na pracovný dokument pre tím:
+- pridaj nadpis a krátke zhrnutie na začiatok,
+- pridaj tabuľku úloh so stĺpcami úloha | zodpovedný | termín | stav,
+- na koniec pridaj sekciu Otvorené otázky.`,
+ tip:"Pages odbúra kopírovanie z chatu do Wordu. Hodí sa na výstupy z Researchera, zápisnice a spoločné plány.",
+ podklad:null},
+{id:"5.4",m:5,kat:"Pages a Notebooks",nazov:"Notebook pre projekt",jadro:false,nastroj:"Copilot Notebooks",
+ ako:["V aplikácii Microsoft 365 Copilot otvorte Notebooks a vytvorte nový notebook s názvom projektu.","Pridajte zdroje: súbory, stránky Pages, e-maily alebo meetingy.","Vložte prompt."],
+ prompt:`Na základe všetkých zdrojov v tomto notebooku priprav:
+1. zhrnutie projektu {projekt} na 5 viet,
+2. časovú os doterajších rozhodnutí,
+3. zoznam otvorených úloh a rizík,
+4. 3 otázky, na ktoré zdroje neodpovedajú a mal by som ich zistiť.`,
+ tip:"Notebook sa oplatí pri projektoch, kde sa obsah hromadí týždne. S cvičnými podkladmi pridajte projektovú kartu, poznámky z porady a e-mailové vlákno.",
+ bez:"Ak Notebooks nemáte, pripojte tie isté súbory cez / v Copilot Chate.",
+ podklad:["07_SEPS_Projektova_karta_vymena_ochran.docx","15_SEPS_Poznamky_z_porady_vymena_ochran.docx","19_SEPS_Emailove_vlakno_terminaly.docx"]},
+{id:"5.5",m:5,kat:"Workflow thinking",nazov:"Review: kontrola faktov vo výstupe",jadro:true,nastroj:"Copilot Chat (Work IQ)",
+ ako:["Vložte prompt do Copilot Chatu so zapnutým Work IQ.","Pod prompt vložte text na kontrolu, napríklad report z cvičenia 2.1 alebo výstup z Researchera.","Sporné body si overte sami v zdroji."],
+ prompt:`Skontroluj text nižšie ako prísny korektor faktov.
+
+Vypíš všetky tvrdenia, čísla, mená a termíny, ktoré treba overiť, a pri každom uveď:
+- či ho vieš potvrdiť z mojich dokumentov alebo e-mailov (so zdrojom),
+- či je v rozpore s nejakým zdrojom,
+- či ho nevieš overiť.
+
+Na záver uveď 3 miesta, kde text pôsobí istejšie, než dovoľujú podklady.
+
+Text:
+`,
+ tip:"Väčšina chýb vzniká preskočením kontroly. Venujte jej viac času než ladeniu promptu.",
+ podklad:null},
+{id:"5.6",m:5,kat:"Workflow thinking",nazov:"Čo delegovať Copilotu a čo si nechať",jadro:false,nastroj:"Copilot Chat",
+ ako:["Vložte prompt do Copilot Chatu.","Odpovedajte na otázky jednu po druhej, pokojne stručne."],
+ prompt:`Pracujem ako {rola} v oddelení {oddelenie}. Pomôž mi rozhodnúť, čo z mojej práce delegovať Copilotu.
+
+Polož mi postupne 4 otázky o mojom bežnom týždni. Vždy polož len jednu otázku a počkaj na odpoveď.
+
+Potom priprav tabuľku: úloha | čo urobí Copilot | čo si nechávam ja (kontrola, rozhodnutie, zodpovednosť) | odhad ušetreného času za týždeň.
+
+Pri úlohách s vysokým dosahom upozorni na riziko prílišnej dôvery vo výstup.`,
+ tip:"Čím väčší dosah rozhodnutia, tým viac ho držte pri sebe. Tabuľku si odložte a po mesiaci ju porovnajte s realitou.",
+ podklad:null},
+{id:"5.7",m:5,kat:"Workflow thinking",nazov:"Mini-workflow: e-mail → Excel → PowerPoint → e-mail",jadro:true,nastroj:"Outlook, Excel, PowerPoint",
+ ako:["Text z podkladu E-mail so zásahmi na zariadeniach si pošlite e-mailom sami sebe (alebo použite vlastný e-mail s dátami).","Krok 1 zadajte Copilotu v Outlooku pri otvorenom e-maile a tabuľku vložte do nového zošita v Exceli (Ctrl + T).","Kroky 2-4 zadávajte postupne v Exceli, PowerPointe a Outlooku.","Pri každom kroku skontrolujte čísla, kým pôjdete ďalej."],
+ prompt:`1. OUTLOOK - pri otvorenom e-maile:
+Vytiahni z e-mailu všetky zásahy ako tabuľku so stĺpcami: dátum, rozvodňa, pole, typ zásahu, technik, hodiny, materiál €. Výstup daj tak, aby som ho mohol vložiť do Excelu.
+
+2. EXCEL - po vložení tabuľky:
+Spočítaj hodiny a náklady na materiál podľa technika a typu zásahu. Nájdi polia s opakovanými poruchami a vytvor graf hodín podľa technika.
+
+3. POWERPOINT - nová prezentácia:
+Vytvor 3 snímky pre vedúceho úseku: prehľad mesiaca, polia s opakovanými poruchami a návrh na zlepšenie. Čísla preber z tejto tabuľky: [vložte výsledky z Excelu]
+
+4. OUTLOOK - nový e-mail:
+Napíš follow-up e-mail vedúcemu úseku so zhrnutím výsledkov v 3 bodoch a s prezentáciou v prílohe. Tón vecný, najviac 120 slov.`,
+ tip:"Copilot prepája kroky, vy strážite smer a kvalitu. Na vlastnej práci použite e-mail, ktorý vám každý mesiac chodí s číslami.",
+ podklad:["21_SEPS_Email_zasahy_september.docx"]}
+];
+const PODKLADY=[
+ ["01_SEPS_profil_useku.docx","Profil fiktívneho úseku správy rozvodní Západ: rozvodne a ľudia"],
+ ["02_SEPS_Prirucka_technika.docx","Príručka technika: pracovný čas, pohotovosť, obchôdzky, OOPP, kontakty"],
+ ["03_SEPS_Smernica_pohotovosti_v2.docx","Smernica o pohotovostných službách (Edit with Copilot)"],
+ ["06_SEPS_Katalog_nahradnych_dielov.docx","Katalóg náhradných dielov a pravidlá schvaľovania objednávok"],
+ ["07_SEPS_Projektova_karta_vymena_ochran.docx","Projektová karta a status reporty: Výmena ochrán R400 Horné Lúky"],
+ ["11_seps_udalosti_2026.xlsx","Udalosti na zariadeniach rozvodní 2026 (aj ako .csv)"],
+ ["14_seps_export_udalosti_surovy.xlsx","Surový export udalostí z riadiaceho systému na čistenie (aj ako .csv)"],
+ ["15_SEPS_Poznamky_z_porady_vymena_ochran.docx","Neupravené poznámky z porady projektu Výmena ochrán"],
+ ["16_SEPS_Clanok_s_chybami.docx","Článok do firemného časopisu s chybami na kontrolu a úpravu"],
+ ["17_SEPS_Zmluva_o_dielo_navrh.docx","Návrh zmluvy o dielo na dodávku ochrán na analýzu"],
+ ["18_seps_plnenie_planu_udrzby.xlsx","Plnenie plánu údržby rozvodní so vzorcami a pravidlami hodnotenia"],
+ ["19_SEPS_Emailove_vlakno_terminaly.docx","Dlhé e-mailové vlákno o meškaní dodávky terminálov"],
+ ["20_SEPS_Prepis_porady_Teams.docx","Prepis porady úseku z Teams"],
+ ["21_SEPS_Email_zasahy_september.docx","E-mail so zásahmi na zariadeniach pre mini-workflow"]
+];
+const POLIA=[
+ ["rola","Vaša pozícia"],["oddelenie","Oddelenie"],["firma","Firma"],["kolega","Kolega, s ktorým často pracujete"],
+ ["projekt","Projekt alebo téma, na ktorej pracujete","full"],["tema","Téma rešerše pre Researcher","full"],
+ ["publikum","Publikum vašej prezentácie","full"]];
+const SPOL={firma:"SEPS"};
+const PRESETY={
+ "Technik rozvodne":{rola:"technik rozvodne",oddelenie:"správa rozvodní",kolega:"Marek Dobiaš",projekt:"Výmena ochrán R400 Horné Lúky",tema:"online monitoring vypínačov a transformátorov v prenosových sústavách",publikum:"vedenie úseku"},
+ "Ochrany a riadenie":{rola:"špecialista ochrán",oddelenie:"ochrany a riadiace systémy",kolega:"Marek Dobiaš",projekt:"Výmena ochrán R400 Horné Lúky",tema:"digitálne rozvodne a ochrany podľa normy IEC 61850",publikum:"technici rozvodní"},
+ "Diagnostika":{rola:"diagnostik",oddelenie:"diagnostika",kolega:"Peter Lehocký",projekt:"termovízne merania 2026",tema:"diagnostika úniku SF6 a náhrady plynu SF6 vo vypínačoch",publikum:"vedenie úseku"},
+ "Príprava prevádzky":{rola:"pracovníčka prípravy prevádzky",oddelenie:"príprava prevádzky",kolega:"Zuzana Hrnčiarová",projekt:"plán odstávok 2027",tema:"plánovanie odstávok v prenosových sústavách v Európe",publikum:"dispečing"},
+ "Projekty obnovy":{rola:"projektová manažérka",oddelenie:"projekty obnovy",kolega:"Lenka Vargová",projekt:"Výmena ochrán R400 Horné Lúky",tema:"riadenie meškaní dodávateľov v projektoch obnovy rozvodní",publikum:"vedenie úseku"}
+};
+const KLUC="seps-copilot2-kontext";
+let ctx=Object.assign({},SPOL,PRESETY["Technik rozvodne"]), aktivny="Technik rozvodne";
+try{const s=JSON.parse(localStorage.getItem(KLUC)||"null"); if(s&&s.ctx){ctx=s.ctx;aktivny=s.preset||"";}}catch(e){}
+function uloz(){try{localStorage.setItem(KLUC,JSON.stringify({ctx:ctx,preset:aktivny}))}catch(e){}}
+const esc=t=>t.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+// jednopísmenové predložky a spojky nezostanú na konci riadka (len pri zobrazení, nie pri kopírovaní)
+const nb=t=>t.replace(/(^|[\s(„])([AaIiOoUuVvKkSsZz])\s/g,"$1$2 ").replace(/(^|[\s(„])([AaIiOoUuVvKkSsZz])\s/g,"$1$2 ");
+function plne(t){return t.replace(/\{(\w+)\}/g,(m,k)=>(ctx[k]||"").trim()||"["+k+"]");}
+function html(t){return nb(esc(t)).replace(/\{(\w+)\}/g,(m,k)=>{const v=(ctx[k]||"").trim();return v?'<span class="tok" data-k="'+k+'">'+esc(v)+'</span>':'<span class="tok empty" data-k="'+k+'">['+k+']</span>';});}
+function renderPresety(){const el=document.getElementById("presets");el.innerHTML="";
+ Object.keys(PRESETY).forEach(n=>{const b=document.createElement("button");b.type="button";b.textContent=n;b.setAttribute("aria-pressed",n===aktivny);
+  b.onclick=()=>{aktivny=n;ctx=Object.assign({},ctx,PRESETY[n]);renderPolia();renderPresety();prekresli();uloz();};el.appendChild(b);});
+ const v=document.createElement("button");v.type="button";v.textContent="Vlastná";v.setAttribute("aria-pressed",aktivny==="");
+ v.onclick=()=>{aktivny="";POLIA.forEach(([k])=>ctx[k]="");renderPolia();renderPresety();prekresli();uloz();document.getElementById("f-rola").focus();};el.appendChild(v);}
+function renderPolia(){const el=document.getElementById("fields");el.innerHTML="";
+ POLIA.forEach(([k,l,c,ph])=>{const d=document.createElement("div");if(c)d.className=c;
+  d.innerHTML='<label for="f-'+k+'">'+l+'</label><input id="f-'+k+'" autocomplete="off">';
+  const i=d.querySelector("input");if(ph)i.placeholder=ph;i.value=ctx[k]||"";i.oninput=()=>{ctx[k]=i.value;if(aktivny){aktivny="";renderPresety();}prekresli();uloz();};el.appendChild(d);});}
+function prekresli(){document.querySelectorAll("pre[data-id]").forEach(p=>{const pr=PROMPTY.find(x=>x.id===p.dataset.id);p.innerHTML=html(pr.prompt);});}
+function renderObsah(){const nav=document.getElementById("nav"),ob=document.getElementById("obsah");
+ MODULY.forEach(m=>{nav.insertAdjacentHTML("beforeend",'<a href="#modul-'+m.n+'"><b>'+m.n+'</b>'+(m.kratko||m.nazov)+'</a>');
+  let h='<section class="modul" id="modul-'+m.n+'"><div class="mhead"><span class="num">'+m.n+'</span><h2>'+m.nazov+'</h2><p>'+nb(m.popis)+'</p></div>';
+  const kat=[...new Set(PROMPTY.filter(p=>p.m===m.n).map(p=>p.kat))];
+  kat.forEach(k=>{const ps=PROMPTY.filter(p=>p.m===m.n&&p.kat===k);
+   h+='<h3 class="kat'+(ps.some(p=>p.jadro)?'':' prazdna')+'">'+k+'</h3>';
+   ps.forEach(p=>{h+='<article class="pr'+(p.jadro?' jadro':'')+'" id="p'+p.id+'"><div class="prhead"><span class="id">'+p.id+'</span><h4>'+nb(p.nazov)+'</h4>'+
+    (p.jadro?'<span class="badge zak">základné</span>':'')+'<span class="badge">'+p.nastroj+'</span></div>'+
+    '<div class="pbox"><pre data-id="'+p.id+'"></pre></div><div class="akcie"><button class="copy" type="button" data-id="'+p.id+'">Kopírovať prompt</button></div>'+
+    '<div class="det"><div><h5>Ako na to</h5><ol>'+p.ako.map(a=>'<li>'+nb(esc(a))+'</li>').join("")+'</ol></div><div><h5>Prispôsobte si</h5><p>'+nb(esc(p.tip))+'</p>'+
+    (p.podklad?'<h5>Podklady na vyskúšanie</h5><p class="files">'+p.podklad.map(f=>'<a href="'+f+'" download>'+f.replace(/^\d+_/,"")+'</a>').join("")+'</p>':'')+
+    (p.bez?'<h5>Bez prístupu k nástroju</h5><p class="bez">'+nb(esc(p.bez))+'</p>':'')+'</div></div></article>';});});
+  ob.insertAdjacentHTML("beforeend",h+'</section>');});
+ nav.insertAdjacentHTML("beforeend",'<a href="#podklady">Podklady</a><span class="sp"></span><label><input type="checkbox" id="zaklad"> Len základné</label>');
+ document.getElementById("zaklad").onchange=e=>document.body.classList.toggle("len-zaklad",e.target.checked);
+ ob.addEventListener("click",e=>{const b=e.target.closest(".copy");if(!b)return;const p=PROMPTY.find(x=>x.id===b.dataset.id);const t=plne(p.prompt);
+  const ok=()=>{b.textContent="Skopírované";b.classList.add("ok");setTimeout(()=>{b.textContent="Kopírovať prompt";b.classList.remove("ok")},1600)};
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(ok,()=>fb(t,ok));}else fb(t,ok);});
+ document.getElementById("flist").innerHTML=PODKLADY.map(([f,d])=>'<tr><td><a href="'+f+'" download>'+f+'</a></td><td>'+nb(d)+'</td></tr>').join("");
+ document.querySelectorAll(".nb,.kroky span").forEach(el=>{el.innerHTML=nb(el.innerHTML);});}
+function fb(t,ok){const a=document.createElement("textarea");a.value=t;a.style.position="fixed";a.style.opacity="0";document.body.appendChild(a);a.select();try{document.execCommand("copy");ok();}catch(e){}a.remove();}
+renderPresety();renderPolia();renderObsah();prekresli();
+</script>
+</body></html>
